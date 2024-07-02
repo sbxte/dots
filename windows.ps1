@@ -1,10 +1,12 @@
 # Helper function 
 
-function link ($target, $link) {
+function Link {
+	param ([String] $Link, [String] $Target)
+
 	# Remove item if it already exists
-	Remove-Item $link
-    New-Item -Path $link -ItemType SymbolicLink -Value $target
+	Remove-Item $Link 2>$null
+	New-Item -Path $Link -ItemType SymbolicLink -Value ( $PSScriptRoot + $Target ) | out-null
 }
 
 # GIT CONFIG
-link("~/.gitconfig", "./git/windows.gitconfig")
+Link -Link "~/.gitconfig" -Target "\git\windows.gitconfig"

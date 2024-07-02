@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# Ask for password upfront
+sudo -v
+
 # GIT CONFIG
 ln -rsf git/linux.gitconfig ~/.gitconfig
 

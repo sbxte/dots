@@ -1,0 +1,149 @@
+[user]
+	email = 72693226+sbxte@users.noreply.github.com
+	name = SByte
+	password = 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
+	signingkey = 81E08516A66793B7
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+[core]
+	longpaths = true
+	editor = nvim
+	sshCommand = "ssh -i ~/.ssh/id_ed25519"
+[pull]
+	rebase = yes
+[diff]
+	tool = vscode
+[difftool "vscode"]
+	cmd = code --wait --diff $LOCAL $REMOTE
+[merge]
+	tool = vscode
+[mergetool "vscode"]
+	cmd = code --wait $MERGED
+	trustExitCode = true
+[alias]
+	alias = config --get-regexp alias
+
+	lgss = "log --graph --decorate --oneline --date-order --format=format:'%C(bold blue)%h %<(70,trunc)%C(reset)%s %<(12,trunc)%C(white)%cn %C(bold green)(%ch) %C(reset)%C(auto)%D'"
+	lgsa = lgss --all
+	lgsf = !git --no-pager lgsa
+	lga = lgsa
+	lgs = lgsa -12
+
+	lgfs = "log --graph --decorate --oneline --date-order --format=format:'%C(bold blue)%H %C(reset)%C(auto)%D %n%C(reset)%C(white)%<(24,trunc)%cn %C(bold green)(%ch) %n%C(reset)@ %C(white)%<(24,trunc)%an %C(bold green)(%ah) %n%C(reset)%B %n%C(reset)%C(white)%N'"
+	lgfa = lgfs --all
+	lgff = "!git --no-pager lgfa"
+	lgf = "lgfa -6"
+
+	lg = "lgs -12"
+
+		# remove this after
+	lgsak = "log --graph --decorate --oneline --author-date-order --format=format:'%C(bold blue)%h %<(70,trunc)%C(reset)%s %<(12,trunc)%C(white)%cn %C(cyan)%G? %C(bold green)(%ch) %C(reset)%C(auto)%D'"
+	lgk = "lgsak -12"
+
+
+	rlf = "reflog --oneline --format='%C(bold blue)%h %C(bold green)%<(10,ltrunc)%gd %C(reset)%<(48,trunc)%gs %C(white)%<(12,trunc)%an %C(bold green)(%ar) %C(reset)%C(auto)%D'"
+	rlfa = "reflog --all --oneline --format='%C(bold blue)%h %C(bold green)%<(20,ltrunc)%gd %C(reset)%<(48,trunc)%gs %C(white)%<(12,trunc)%an %C(bold green)(%ar) %C(reset)%C(auto)%D'"
+	rlfas = rlfa -12
+	rls = rlf -8
+	rl = rlfas
+
+	sh = "show --format='%C(bold blue)%H %n%C(auto)%D %n%C(reset)%s'"
+		# shf = "show --format='oneline'"
+
+	f = fetch
+	af = fetch --all
+	ab = branch --all
+	a = add
+	aa = add -A
+	as = !git add -A && git stash
+	addn = add -N -A
+	addi = add -i
+	addp = add -p
+	reseti = reset -p
+	restores = restore --staged
+
+	merges = merge --squash
+
+	pushf = push --force
+	pushd = push -d
+
+	reseth = reset --hard
+	resets = reset --soft
+
+	main = !git switch main -q || git switch master -q
+
+	pick = cherry-pick
+	ch = checkout
+	s = status
+	si = switch
+	br = branch
+
+	com = commit
+	acom = "!git add -A && git commit"
+	icom = "!git add -i && git commit"
+	ecom = commit --allow-empty
+	amcom = "!git add -A && git commit --amend --no-edit"
+
+	difft = difftool
+	merget = mergetool
+	branchd = branch -D
+	branchf = branch -f
+	branchm = branch -m
+[color]
+	diff = true
+	status = always
+	branch = true
+	interactive = auto
+	ui = true
+	pager = true
+[color "branch"]
+	upstream = yellow
+	remote = "#ff00ff"
+	current = bold green
+	local = normal
+[color "decorate"]
+	tag = "#ff0080" # Red slightly pink ish
+	remoteBranch = "#ff00ff" #Magenta
+	HEAD = "#00ffff" # Cyan
+	branch = bold green # well yeah...
+[color "diff"]
+	meta = "#00c8ff" # Light blue
+	frag = "#ff00ff" # Magenta
+	new = "#00ff5e" # Lime-blue ish green
+	old = "#ff9900" # Orange ish
+[difftool]
+	prompt = no
+[mergetool]
+	prompt = no
+[log]
+	# RED, GREEN, YELLOW, CYAN, BLUE, MAGENTA
+	graphColors = "#ff0000","#00ff00","#008800","#00ffff","#0000ff","#ff00ff"
+[completion]
+	commands = true
+[commit]
+	gpgsign = true
+[safe]
+	directory = *
+[gpg "ssh"]
+	allowedSignersFile = C:/Users/Daniel/allowed_signers
+[fetch]
+	writeCommitGraph = true
+[rerere]
+	enabled = true
+[blame]
+	coloring = repeatedLines
+
+
+# DOTCONFIG WINDOWS LINUX SEPARATION
+
+[core]
+	autocrlf = false
+
+[credential]
+	helper = oauth
+
+[gpg]
+	program = /usr/bin/gpg

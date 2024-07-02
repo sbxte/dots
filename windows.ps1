@@ -8,5 +8,8 @@ function Link {
 	New-Item -Path $Link -ItemType SymbolicLink -Value ( $PSScriptRoot + $Target ) | out-null
 }
 
+# Powershell Profile
+Link -Link $profile -Target "\pwsh\profile.ps1"
+
 # GIT CONFIG
 Link -Link "~/.gitconfig" -Target "\git\windows.gitconfig"

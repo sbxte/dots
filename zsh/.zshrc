@@ -9,7 +9,7 @@ eval "$(zoxide init zsh)"
 export PATH="$PATH:/opt/nvim-linux64/bin"
 
 # Oh My Posh
-eval "$(/home/linuxbrew/.linuxbrew/bin/oh-my-posh --init --shell zsh --config ~/repo/omp-config/custom.omp.json)"
+eval "$(/home/linuxbrew/.linuxbrew/bin/oh-my-posh --init --shell zsh --config ~/.omp.json)"
 
 # SSH Agent
 # (silenced output)

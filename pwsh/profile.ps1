@@ -1,6 +1,6 @@
 Import-Module $env:ChocolateyInstall\helpers\chocolateyProfile.psm1
 
-oh-my-posh init pwsh --config "D:/Source/Repo/omp-config/custom.omp.json" | Invoke-Expression
+oh-my-posh init pwsh --config "~/.omp.json" | Invoke-Expression
 
 # Import-Module posh-git    # Already covered by oh-my-posh
 

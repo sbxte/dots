@@ -10,6 +10,9 @@ mkdir -p ~/.zsh
 cp zsh/git-completion.bash ~/.zsh
 cp zsh/git-completion.zsh ~/.zsh/_git
 
+# Oh My Posh
+ln -rsf omp/omp.json ~/.omp.json
+
 # ZSH
 ln -rsf zsh/.zshrc ~/.zshrc
 source zsh/.zshrc

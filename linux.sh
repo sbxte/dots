@@ -3,11 +3,16 @@
 # Ask for password upfront
 sudo -v
 
-# GIT CONFIG
+# GIT
 ln -rsf git/linux.gitconfig ~/.gitconfig
+
+mkdir -p ~/.zsh
+cp zsh/git-completion.bash ~/.zsh
+cp zsh/git-completion.zsh ~/.zsh/_git
 
 # ZSH
 ln -rsf zsh/.zshrc ~/.zshrc
+source zsh/.zshrc
 
 # TMUX
 ln -rsf tmux/.tmux.conf ~/.tmux.conf

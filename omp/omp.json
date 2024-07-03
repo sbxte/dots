@@ -61,21 +61,23 @@
 		},
 		{
 			"alignment": "left",
+			"newline": true,
 			"segments": [
 				{
-					"background": "#f1fa8c",
-					"foreground": "#282a36",
-					"invert_powerline": true,
-					"leading_diamond": "\ue0b2",
-					"style": "diamond",
-					"template": " \ue7ad {{.Profile}}{{if .Region}}@{{.Region}}{{end}}",
-					"trailing_diamond": "\ue0b4",
-					"type": "aws"
+					"foreground": "#007ACC",
+					"style": "plain",
+					"template": "\u279c ",
+					"type": "text"
 				}
 			],
-			"type": "rprompt"
+			"type": "prompt"
 		}
 	],
+	"secondary_prompt": {
+        "background": "transparent",
+        "foreground": "#ffffff",
+        "template": "-> "
+    },
 	"final_space": true,
 	"version": 2
 }

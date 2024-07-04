@@ -85,7 +85,7 @@
 	acom = "!git add -A && git commit"
 	icom = "!git add -i && git commit"
 	ecom = commit --allow-empty
-	amcom = "!git add -A && git commit --amend --no-edit"
+	amcom = commit --amend --no-edit
 
 	difft = difftool
 	merget = mergetool

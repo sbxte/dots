@@ -10,7 +10,6 @@
 	clean = git-lfs clean -- %f
 [core]
 	longpaths = true
-	editor = nvim
 	sshCommand = "ssh -i ~/.ssh/id_ed25519"
 [pull]
 	rebase = yes
@@ -142,6 +141,8 @@
 [core]
 	autocrlf = true
 	safecrlf = warn
+
+	editor = notepad
 
 [credential]
 	helper = wincred

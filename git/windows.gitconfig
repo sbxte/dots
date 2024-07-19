@@ -1,8 +1,8 @@
 [user]
-	email = 72693226+sbxte@users.noreply.github.com
+	email = stormybytes@gmail.com
 	name = SByte
 	password = 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
-	signingkey = 81E08516A66793B7
+	signingkey = BEA213B1E1322CB4
 [filter "lfs"]
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process

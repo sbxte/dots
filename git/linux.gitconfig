@@ -11,6 +11,8 @@
 [core]
 	longpaths = true
 	sshCommand = "ssh -i ~/.ssh/id_ed25519"
+[init]
+	defaultBranch = master
 [pull]
 	rebase = yes
 [diff]

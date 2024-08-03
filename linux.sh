@@ -19,3 +19,6 @@ source zsh/.zshrc
 
 # TMUX
 ln -rsf tmux/.tmux.conf ~/.tmux.conf
+
+# Neovim
+ln -rsf nvim ~/.config/nvim

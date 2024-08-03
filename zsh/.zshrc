@@ -1,11 +1,10 @@
 # ZSH CONF
 
-# ZOXIDE (Better cd)
-export PATH=$PATH:/home/sbyte/.local/bin
-eval "$(zoxide init zsh)"
-
 # Homebrew
 export PATH=$PATH:/opt/homebrew/bin
+
+# ZOXIDE (Better cd)
+eval "$(zoxide init zsh)"
 
 # NeoVim
 export PATH="$PATH:/opt/nvim-linux64/bin"

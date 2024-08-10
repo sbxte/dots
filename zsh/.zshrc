@@ -13,8 +13,9 @@ export PATH="$PATH:/opt/nvim-linux64/bin"
 eval "$(/home/linuxbrew/.linuxbrew/bin/oh-my-posh --init --shell zsh --config ~/.omp.json)"
 
 # SSH Agent
-# (silenced output)
-eval `ssh-agent` > /dev/null
+if ! [[ -v SSH_AUTH_SOCK ]]; then
+	eval `ssh-agent` > /dev/null
+fi
 
 # Gpg Agent
 export GPG_TTY=$(tty)

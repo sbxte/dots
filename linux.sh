@@ -22,3 +22,6 @@ ln -rsf tmux/.tmux.conf ~/.tmux.conf
 
 # Neovim
 ln -rsf nvim ~/.config/nvim
+
+# Alacritty
+ln -rsf alacritty/.alacritty.toml ~/.alacritty.toml

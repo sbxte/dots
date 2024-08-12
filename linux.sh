@@ -21,7 +21,10 @@ source zsh/.zshrc
 ln -rsf tmux/.tmux.conf ~/.tmux.conf
 
 # Neovim
-ln -rsf nvim ~/.config/nvim
+ln -rsf nvim/ ~/.config/nvim
 
 # Alacritty
 ln -rsf alacritty/.alacritty.toml ~/.alacritty.toml
+
+# Hyprland
+ln -rsf hyprland/hyprland.conf ~/.config/hypr/hyprland.conf

@@ -35,7 +35,6 @@ autoload -Uz compinit && compinit
 #
 
 alias zshrc="source ~/.zshrc"
-alias bat="batcat"
 alias ls="exa -l"
 
 alias compact_memory="sudo bash -c 'echo 1 > /proc/sys/vm/compact_memory'"

@@ -35,13 +35,13 @@ link zsh/git-completion.bash ~/.zsh git-completion.bash
 link zsh/git-completion.zsh ~/.zsh _git
 
 # TMUX
-link tmux/.tmux.conf ~ .tmux.conf
+link tmux/.tmux.conf ~/.config/ .tmux.conf
 
 # Neovim
 link nvim ~/.config nvim
 
 # Alacritty
-link alacritty/.alacritty.toml ~ .alacritty.toml
+link alacritty ~/.config/ alacritty
 
 # Hyprland
 link hyprland ~/.config hypr

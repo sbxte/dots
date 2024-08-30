@@ -27,4 +27,11 @@ ln -rsf nvim/ ~/.config/nvim
 ln -rsf alacritty/.alacritty.toml ~/.alacritty.toml
 
 # Hyprland
-ln -rsf hyprland/hyprland.conf ~/.config/hypr/hyprland.conf
+ln -rsf hyprland/ ~/.config/hypr
+
+#
+# MISC
+#
+
+# Wall papers
+ln -rsf wallpapers/ ~/wallpapers

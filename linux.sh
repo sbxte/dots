@@ -46,6 +46,9 @@ link alacritty/.alacritty.toml ~ .alacritty.toml
 # Hyprland
 link hyprland ~/.config hypr
 
+# Eww
+link eww ~/.config eww
+
 #
 # MISC
 #

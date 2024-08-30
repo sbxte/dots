@@ -3,35 +3,52 @@
 # Ask for password upfront
 sudo -v
 
-# GIT
-ln -rsf git/linux.gitconfig ~/.gitconfig
+# Sym link helper
+link() {
+	TARGET=$1
+	DIR=$2
+	LINK=$3
+	FULL_LINK="$DIR/$LINK"
 
-mkdir -p ~/.zsh
-cp zsh/git-completion.bash ~/.zsh
-cp zsh/git-completion.zsh ~/.zsh/_git
+	# Remove link if it exists
+	if [ -f "$FULL_LINK" ]; then
+		rm "$FULL_LINK"
+	elif [ -d "$FULL_LINK" ]; then
+		rm -rf "$FULL_LINK"
+	fi
+
+	# Create symbolic link
+	mkdir -p "$DIR"
+	ln -rsf "$TARGET" "$FULL_LINK"
+}
+
+# GIT
+link git/linux.gitconfig ~ .gitconfig
 
 # Oh My Posh
-ln -rsf omp/omp.json ~/.omp.json
+link omp/omp.json ~ .omp.json
 
 # ZSH
-ln -rsf zsh/.zshrc ~/.zshrc
-source zsh/.zshrc
+link zsh/.zshrc ~ .zshrc
+
+link zsh/git-completion.bash ~/.zsh git-completion.bash
+link zsh/git-completion.zsh ~/.zsh _git
 
 # TMUX
-ln -rsf tmux/.tmux.conf ~/.tmux.conf
+link tmux/.tmux.conf ~ .tmux.conf
 
 # Neovim
-ln -rsf nvim/ ~/.config/nvim
+link nvim ~/.config nvim
 
 # Alacritty
-ln -rsf alacritty/.alacritty.toml ~/.alacritty.toml
+link alacritty/.alacritty.toml ~ .alacritty.toml
 
 # Hyprland
-ln -rsf hyprland/ ~/.config/hypr
+link hyprland ~/.config hypr
 
 #
 # MISC
 #
 
 # Wall papers
-ln -rsf wallpapers/ ~/wallpapers
+link wallpapers ~ wallpapers

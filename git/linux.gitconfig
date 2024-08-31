@@ -31,23 +31,23 @@
 	lgsa = lgss --all
 	lgsf = !git --no-pager lgsa
 	lga = lgsa
-	lgs = lgsa -12
+	lgs = !git --no-pager lgsa -12
 
 	lgfs = "log --graph --decorate --oneline --date-order --format=format:'%C(bold blue)%H %C(reset)%C(auto)%D %n%C(reset)%C(white)%<(24,trunc)%cn %C(bold green)(%ch) %n%C(reset)@ %C(white)%<(24,trunc)%an %C(bold green)(%ah) %n%C(reset)%B %n%C(reset)%C(white)%N'"
 	lgfa = lgfs --all
 	lgff = "!git --no-pager lgfa"
-	lgf = "lgfa -6"
+	lgf = !git --no-pager lgfa -6
 
-	lg = "lgs -12"
+	lg = lgs
 
 		# remove this after
 	lgsak = "log --graph --decorate --oneline --author-date-order --format=format:'%C(bold blue)%h %<(70,trunc)%C(reset)%s %<(12,trunc)%C(white)%cn %C(cyan)%G? %C(bold green)(%ch) %C(reset)%C(auto)%D'"
-	lgk = "lgsak -12"
+	lgk = !git --no-pager lgsak -12
 
 
 	rlf = "reflog --oneline --format='%C(bold blue)%h %C(bold green)%<(10,ltrunc)%gd %C(reset)%<(48,trunc)%gs %C(white)%<(12,trunc)%an %C(bold green)(%ar) %C(reset)%C(auto)%D'"
 	rlfa = "reflog --all --oneline --format='%C(bold blue)%h %C(bold green)%<(20,ltrunc)%gd %C(reset)%<(48,trunc)%gs %C(white)%<(12,trunc)%an %C(bold green)(%ar) %C(reset)%C(auto)%D'"
-	rlfas = rlfa -12
+	rlfas = !git --no-pager rlfa -12
 	rls = rlf -8
 	rl = rlfas
 

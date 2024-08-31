@@ -44,10 +44,7 @@ link nvim ~/.config nvim
 link alacritty ~/.config/ alacritty
 
 # Hyprland
-link hyprland ~/.config hypr
-
-# Eww
-link eww ~/.config eww
+link hypr ~/.config hypr
 
 #
 # MISC

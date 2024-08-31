@@ -1,64 +1,32 @@
-$foreground: #ffffff;
-$grey: #aaaaaa;
-$foreground-alt: #465059;
-$background: #0e1419;
-$black: #000000;
-$red: #ff6565;
-$green: #b8cc52;
-$yellow: #e6c446;
-$blue: #68d4ff;
-$magenta: #ffa3aa;
-$cyan: #36a3d9;
-$white: #ffffff;
-
 * {
-  all: unset;
+    all: unset;
+    font-family: JetBrainsMono;
+    font-weight: bold;
 }
+@import "scripts/colors/colors.scss";
+@import "scss/lib.scss";
 
-window {
-  background: $background;
-}
+@import "scss/bar.scss";
+@import "scss/powermenu.scss";
+@import "scss/launcher.scss";
 
-.bar {
-  font-family: "Noto Sans";
-  font-size: 13px;
-  margin: 0 10px;
-}
-
-.icon-module {
-  margin: 0 5px;
-  & > &__icon {
-    margin-right: 5px;
-    font-family: "Font Awesome 5 Free Solid";
-  }
-}
+@import "scss/control_center.scss";
+@import "scss/notifications_popup.scss";
 
 
-.workspaces {
-  font-family: "Font Awesome 5 Free Solid";
-  font-size: 12px;
-  margin-right: 20px;
 
-  button {
-    margin: 0px 3px;
-  }
-  .occupied {
-    color: $grey;
-  }
-
-  .focused {
-    color: $white;
-  }
-
-  .urgent {
-    color: $red; 
-  }
-
-  .empty {
-    padding-top: 2px;
-    color: $foreground-alt;
-    font-size: 10px;
-//  font-family: "Font Awesome 5 Free Regular"
-  }
-
-}
+@import "scss/language.scss";
+@import "scss/taskbar.scss";
+@import "scss/clock.scss";
+@import "scss/logo.scss";
+@import "scss/quick_settings.scss";
+@import "scss/user.scss";
+@import "scss/volume.scss";
+@import "scss/workspaces.scss";
+@import "scss/tray.scss";
+@import "scss/weather.scss";
+@import "scss/music.scss";
+@import "scss/indicator.scss";
+@import "scss/notifications.scss";
+@import "scss/recorder_menu.scss";
+@import "scss/picker.scss";

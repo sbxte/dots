@@ -28,9 +28,6 @@ link git/linux.gitconfig ~ .gitconfig
 # ZSH
 link zsh/.zshrc ~ .zshrc
 
-link zsh/git-completion.bash ~/.zsh git-completion.bash
-link zsh/git-completion.zsh ~/.zsh _git
-
 # TMUX
 link tmux/.tmux.conf ~/.config/ .tmux.conf
 

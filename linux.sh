@@ -25,9 +25,6 @@ link() {
 # GIT
 link git/linux.gitconfig ~ .gitconfig
 
-# Oh My Posh
-link omp/omp.json ~ .omp.json
-
 # ZSH
 link zsh/.zshrc ~ .zshrc
 

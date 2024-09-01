@@ -40,6 +40,9 @@ link alacritty ~/.config/ alacritty
 # Hyprland
 link hypr ~/.config hypr
 
+# Dunst
+link dunst ~/.config dunst
+
 #
 # MISC
 #

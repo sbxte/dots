@@ -39,9 +39,8 @@ link alacritty ~/.config/ alacritty
 
 # Hyprland
 link hypr ~/.config hypr
-
-# Dunst
 link dunst ~/.config dunst
+link waybar ~/.config waybar
 
 #
 # MISC

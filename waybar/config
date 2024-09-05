@@ -52,9 +52,9 @@
 		"tooltip": false
 	},
 
-	"sway/workspaces": {
-		"disable-scroll": true,
-		"format": "{name}"
+	"hyprland/workspaces": {
+		"on-scroll-up": "hyprctl dispatch workspace e+1",
+		"on-scroll-down": "hyprctl dispatch workspace e-1"
 	},
 
 	"clock#1": {
@@ -121,10 +121,6 @@
 	},
 	"tray": {
 		"icon-size": 20
-	},
-	"hyprland/workspaces": {
-		"on-scroll-up": "hyprctl dispatch workspace e+1",
-		"on-scroll-down": "hyprctl dispatch workspace e-1"
 	},
 	"custom/notification": {
 		"tooltip": false,

@@ -48,3 +48,25 @@ link waybar ~/.config waybar
 
 # Wall papers
 link wallpapers ~ wallpapers
+
+# Install needed packages
+. /etc/os-release
+
+case $ID in
+arch)
+	sudo pacman -S --noconfirm --needed git zsh neovim alacritty hyprland swaync waybar thunar wofi hyprpaper pamixer >/dev/null 2>&1
+	if ! command -v yay &>/dev/null; then
+		pacman -S --needed git base-devel
+		git clone https://aur.archlinux.org/yay-bin.git
+		cd yay-bin
+		makepkg -si
+		cd ..
+		rm -rf yay-bin
+	fi
+	sudo yay -S --noconfirm --needed hyprshot >/dev/null 2>&1
+	;;
+
+*)
+	echo "Hmm, new distro?"
+	;;
+esac

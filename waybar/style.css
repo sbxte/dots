@@ -76,6 +76,7 @@ window#waybar {
 #cpu,
 #battery,
 #disk,
+#tray,
 #custom-notification {
 	padding: 0 10px;
 }

@@ -24,13 +24,15 @@
 	],
 	"modules-right": [
 		"custom/left-arrow-dark",
+		"tray",
+		"custom/left-arrow-light",
+		"custom/left-arrow-dark",
 		"backlight",
 		"pulseaudio",
 		"memory",
 		"cpu",
 		"battery",
-		"disk",
-		"tray"
+		"disk"
 	],
 
 	"custom/left-arrow-dark": {

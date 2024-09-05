@@ -24,6 +24,9 @@
 	],
 	"modules-right": [
 		"custom/left-arrow-dark",
+		"backlight",
+		"custom/left-arrow-light",
+		"custom/left-arrow-dark",
 		"pulseaudio",
 		"custom/left-arrow-light",
 		"custom/left-arrow-dark",
@@ -77,6 +80,12 @@
 		"tooltip": false
 	},
 
+	"backlight": {
+		"format": "{icon} {percent}%",
+		"format-icons": ["", ""],
+		"on-scroll-up": "~/.config/hypr/scripts/backlight.sh inc",
+		"on-scroll-down": "~/.config/hypr/scripts/backlight.sh dec",
+	},
 	"pulseaudio": {
 		"format": "{icon} {volume:2}%",
 		"format-bluetooth": "{icon}  {volume}%",

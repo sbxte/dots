@@ -1,6 +1,6 @@
 * {
 	font-size: 20px;
-	font-family: monospace;
+	font-family: "JetBrainsMono Nerd Font";
 }
 
 window#waybar {
@@ -22,6 +22,7 @@ window#waybar {
 #clock.1,
 #clock.2,
 #clock.3,
+#backlight,
 #pulseaudio,
 #memory,
 #cpu,
@@ -49,6 +50,9 @@ window#waybar {
 	padding: 0 3px;
 }
 
+#backlight {
+	color: #21ff90;
+}
 #pulseaudio {
 	color: #268bd2;
 }
@@ -66,6 +70,7 @@ window#waybar {
 }
 
 #clock,
+#backlight,
 #pulseaudio,
 #memory,
 #cpu,
@@ -73,8 +78,4 @@ window#waybar {
 #disk,
 #custom-notification {
 	padding: 0 10px;
-}
-
-#custom-notification {
-  font-family: "JetBrainsMono Nerd Font";
 }

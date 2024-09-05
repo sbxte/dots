@@ -25,23 +25,11 @@
 	"modules-right": [
 		"custom/left-arrow-dark",
 		"backlight",
-		"custom/left-arrow-light",
-		"custom/left-arrow-dark",
 		"pulseaudio",
-		"custom/left-arrow-light",
-		"custom/left-arrow-dark",
 		"memory",
-		"custom/left-arrow-light",
-		"custom/left-arrow-dark",
 		"cpu",
-		"custom/left-arrow-light",
-		"custom/left-arrow-dark",
 		"battery",
-		"custom/left-arrow-light",
-		"custom/left-arrow-dark",
 		"disk",
-		"custom/left-arrow-light",
-		"custom/left-arrow-dark",
 		"tray"
 	],
 

@@ -39,7 +39,7 @@ link alacritty ~/.config/ alacritty
 
 # Hyprland
 link hypr ~/.config hypr
-link dunst ~/.config dunst
+link swaync ~/.config swaync
 link waybar ~/.config waybar
 
 #

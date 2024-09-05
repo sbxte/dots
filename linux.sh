@@ -42,6 +42,9 @@ link hypr ~/.config hypr
 link swaync ~/.config swaync
 link waybar ~/.config waybar
 
+# Cava
+link cava ~/.config cava
+
 #
 # MISC
 #

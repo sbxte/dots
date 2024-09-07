@@ -22,6 +22,7 @@ window#waybar {
 #clock.1,
 #clock.2,
 #clock.3,
+#network,
 #backlight,
 #pulseaudio,
 #memory,
@@ -50,6 +51,9 @@ window#waybar {
 	padding: 0 3px;
 }
 
+#network {
+	color: #fa5246;
+}
 #backlight {
 	color: #21ff90;
 }
@@ -70,6 +74,7 @@ window#waybar {
 }
 
 #clock,
+#network,
 #backlight,
 #pulseaudio,
 #memory,

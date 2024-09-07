@@ -27,6 +27,7 @@
 		"tray",
 		"custom/left-arrow-light",
 		"custom/left-arrow-dark",
+		"network",
 		"backlight",
 		"pulseaudio",
 		"memory",
@@ -70,6 +71,19 @@
 		"tooltip": false
 	},
 
+	"network": {
+		// "interface": "wlp2s0",
+		"format": "{ifname}",
+		"format-wifi": "  {signalStrength}",
+		"format-ethernet": "󰈀 Eth",
+		"format-disconnected": "󰖪",
+		"format-icons" : ["󰤟", "󰤢", "󰤥", "󰤨"],
+		"tooltip-format": "{ifname} via {gwaddr} 󰊗",
+		"tooltip-format-wifi": "{essid} ({signalStrength}%)  ",
+		"tooltip-format-ethernet": "{ipaddr}/{cidr} {ifname} 󰈀 ",
+		"tooltip-format-disconnected": "Disconnected 󰖪 ",
+		"max-length": 50
+	},
 	"backlight": {
 		"format": "{icon} {percent}",
 		"format-icons": ["", ""],

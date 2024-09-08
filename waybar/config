@@ -32,6 +32,7 @@
 		"pulseaudio",
 		"memory",
 		"cpu",
+		"temperature",
 		"battery",
 		"disk"
 	],
@@ -112,6 +113,10 @@
 	"cpu": {
 		"interval": 5,
 		"format": " {usage:2}"
+	},
+	"temperature": {
+		"format": " {temperatureC}°C",
+		"format-icons": ["", "", "", "", ""],
 	},
 	"battery": {
 		"states": {

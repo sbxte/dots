@@ -67,13 +67,12 @@
 	"clock#2": {
 		"format": "{:%H:%M}",
 		"tooltip-format": "{tz_list}",
-			"timezones": [
-				"Asia/Jakarta",
-				"Etc/UTC",
-				"America/New_York",
-				"Asia/Tokyo"
-			]
-		},
+		"timezones": [
+			"Asia/Jakarta",
+			"Etc/UTC",
+			"America/New_York",
+			"Asia/Tokyo"
+		],
 		"actions":  {
 			"on-click-right": "mode",
 			"on-scroll-up": "tz_up",

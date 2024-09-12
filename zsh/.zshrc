@@ -143,7 +143,7 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 #
 
 alias zshrc="source ~/.zshrc"
-alias ls="exa -l"
+alias ls="eza --icons -lh"
 
 alias compact_memory="sudo bash -c 'echo 1 > /proc/sys/vm/compact_memory'"
 alias drop_caches="sudo bash -c 'echo 1 > /proc/sys/vm/drop_caches'"

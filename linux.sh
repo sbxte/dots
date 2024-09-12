@@ -58,7 +58,7 @@ link wallpapers ~ wallpapers
 case $ID in
 arch)
 	sudo pacman -S --noconfirm --needed base-devel git zsh neovim alacritty hyprland swaync waybar thunar wofi hyprpaper pamixer \
-		nerd-fonts acpilight ibus >/dev/null 2>&1
+		nerd-fonts acpilight ibus exa eza >/dev/null 2>&1
 	if ! command -v yay &>/dev/null; then
 		pacman -S --needed git base-devel
 		git clone https://aur.archlinux.org/yay-bin.git

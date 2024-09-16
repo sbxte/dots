@@ -10,7 +10,6 @@
 	clean = git-lfs clean -- %f
 [core]
 	longpaths = true
-	sshCommand = "ssh -i ~/.ssh/id_ed25519"
 [init]
 	defaultBranch = master
 [pull]
@@ -144,9 +143,10 @@
 	safecrlf = warn
 
 	editor = notepad
+	sshCommand = 'C:\\Windows\\System32\\OpenSSH\\ssh.exe'
 
 [credential]
 	helper = wincred
 
 [gpg]
-	program = D:/Apps/GnuPG/bin/gpg.exe
+	program = "C:\\Program Files (x86)\\GnuPG\\bin\\gpg.exe"

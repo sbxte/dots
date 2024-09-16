@@ -10,7 +10,6 @@
 	clean = git-lfs clean -- %f
 [core]
 	longpaths = true
-	sshCommand = "ssh -i ~/.ssh/id_ed25519"
 [init]
 	defaultBranch = master
 [pull]
@@ -143,6 +142,8 @@
 	autocrlf = false
 
 	editor = vim
+
+	sshCommand = "ssh -i ~/.ssh/id_ed25519"
 
 [credential]
 	helper = oauth

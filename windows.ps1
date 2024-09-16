@@ -4,7 +4,7 @@ function Link {
 	param ([String] $Link, [String] $Target)
 
 	# Remove item if it already exists
-	Remove-Item $Link 2>$null
+	Remove-Item -Recurse $Link 2>$null
 	New-Item -Path $Link -ItemType SymbolicLink -Value ( $PSScriptRoot + $Target ) | out-null
 }
 
@@ -16,3 +16,6 @@ Link -Link "~/.omp.json" -Target "\omp\omp.json"
 
 # Powershell Profile
 Link -Link $profile -Target "\pwsh\profile.ps1"
+
+# Nvim config
+Link -Link $($env:localappdata + "/nvim") -Target "/nvim/"

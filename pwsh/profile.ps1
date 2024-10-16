@@ -2,7 +2,7 @@ Import-Module $env:ChocolateyInstall\helpers\chocolateyProfile.psm1
 
 oh-my-posh init pwsh --config "~/.omp.json" | Invoke-Expression
 
-# Import-Module posh-git    # Already covered by oh-my-posh
+Import-Module posh-git
 
 $PSStyle.FileInfo.Directory = "`e[38;2;255;255;255m"
 

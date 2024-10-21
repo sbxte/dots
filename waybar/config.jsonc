@@ -65,7 +65,7 @@
 		"tooltip": false
 	},
 	"clock#2": {
-		"format": "{:%H:%M}",
+		"format": "{:%H:%M (%Z)}",
 		"tooltip-format": "{tz_list}",
 		"timezones": [
 			"Asia/Jakarta",

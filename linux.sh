@@ -57,7 +57,7 @@ link wallpapers ~ wallpapers
 
 case $ID in
 arch)
-	sudo pacman -S --noconfirm --needed base-devel git zsh neovim alacritty hyprland swaync waybar thunar wofi hyprpaper pamixer \
+	sudo pacman -S --noconfirm --needed base-devel git zsh neovim alacritty hyprland swaync waybar thunar wofi hyprpaper pamixer pavucontrol \
 		nerd-fonts acpilight ibus exa eza powertop tuned
 	if ! command -v yay &>/dev/null; then
 		pacman -S --needed git base-devel

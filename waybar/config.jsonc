@@ -166,7 +166,9 @@
 			"",
 			"",
 			""
-		]
+		],
+		"tooltip": true,
+		"tooltip-format": "{timeTo}\nPower: {power}\nCapacity: {capacity}\nHealth: {health}\nCycles: {cycles}"
 	},
 	"disk": {
 		"interval": 5,

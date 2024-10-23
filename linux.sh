@@ -68,7 +68,7 @@ arch)
 		cd ..
 		rm -rf yay-bin
 	fi
-	sudo yay -S --noconfirm --needed hyprshot ibus-daemon
+	sudo yay -S --noconfirm --needed hyprshot ibus-daemon xwaylandvideobridge
 	;;
 
 *)

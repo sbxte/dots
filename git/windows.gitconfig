@@ -26,7 +26,7 @@
 [alias]
 	alias = config --get-regexp alias
 
-	lgss = "log --graph --decorate --oneline --date-order --format=format:'%C(bold blue)%h %<(50,trunc)%C(reset)%s %<(12,trunc)%C(white)%cn %C(bold green)(%ch) %C(reset)%C(auto)%D'"
+	lgss = "log --graph --decorate --oneline --date-order --format=format:'%C(bold blue)%h %<(50,trunc)%C(reset)%s %<(12,trunc)%C(white)%cn %<(12,trunc)%C(white)%an %C(bold green)(%ch) %C(reset)%C(auto)%D'"
 	lgsa = lgss --all
 	lgsf = !git --no-pager lgsa
 	lga = lgsa

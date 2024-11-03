@@ -1,13 +1,10 @@
-# Exit if xbacklight does not exist
-if ! command -v xbacklight &>/dev/null; then
-	exit
-fi
+#!/bin/bash
 
 if [[ $1 = "inc" ]]; then
-	xbacklight -inc 5
+	brightnessctl s 5%+
 elif [[ $1 = "dec" ]]; then
-	level=$(xbacklight -get)
+	level=$(awk -F ',' '{print substr($4,0,2)}' <<<$(brightnessctl -m i))
 	if [[ $level -ge 10 ]]; then
-		xbacklight -dec 5
+		brightnessctl s 5%-
 	fi
 fi

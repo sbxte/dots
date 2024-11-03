@@ -29,7 +29,7 @@
 		"custom/left-arrow-dark",
 		"network",
 		"backlight",
-		"pulseaudio",
+		"wireplumber",
 		"memory",
 		"cpu",
 		"temperature",
@@ -110,7 +110,7 @@
 	"network": {
 		// "interface": "wlp2s0",
 		"format": "{ifname}",
-		"format-wifi": "  {signalStrength}",
+		"format-wifi": "{icon} {signalStrength}",
 		"format-ethernet": "󰈀 Eth",
 		"format-disconnected": "󰖪",
 		"format-icons" : ["󰤟", "󰤢", "󰤥", "󰤨"],
@@ -126,7 +126,7 @@
 		"on-scroll-up": "~/.config/hypr/scripts/backlight.sh inc",
 		"on-scroll-down": "~/.config/hypr/scripts/backlight.sh dec",
 	},
-	"pulseaudio": {
+	"wireplumber": {
 		"format": "{icon} {volume:2}",
 		"format-bluetooth": "{icon}  {volume}",
 		"format-muted": "MUTE",
@@ -137,8 +137,9 @@
 				""
 			]
 		},
+		"tooltip-format": "{node_name}   {volume:2}",
 		"scroll-step": 5,
-		"on-click": "pamixer -t",
+		"on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
 		"on-click-right": "pavucontrol"
 	},
 	"memory": {
@@ -150,7 +151,7 @@
 		"format": " {usage:2}"
 	},
 	"temperature": {
-		"format": " {temperatureC}°C",
+		"format": "{icon} {temperatureC}°C",
 		"format-icons": ["", "", "", "", ""],
 	},
 	"battery": {

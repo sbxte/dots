@@ -24,7 +24,7 @@ window#waybar {
 #clock.3,
 #network,
 #backlight,
-#pulseaudio,
+#wireplumber,
 #memory,
 #cpu,
 #battery,
@@ -58,7 +58,7 @@ window#waybar {
 #backlight {
 	color: #21ff90;
 }
-#pulseaudio {
+#wireplumber {
 	color: #268bd2;
 }
 #memory {
@@ -80,7 +80,7 @@ window#waybar {
 #clock,
 #network,
 #backlight,
-#pulseaudio,
+#wireplumber,
 #memory,
 #cpu,
 #battery,

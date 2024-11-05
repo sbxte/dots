@@ -110,10 +110,10 @@
 	"network": {
 		// "interface": "wlp2s0",
 		"format": "{ifname}",
-		"format-wifi": "{icon} {signalStrength}",
+		"format-wifi": "{icon}",
 		"format-ethernet": "󰈀 Eth",
-		"format-disconnected": "󰖪",
-		"format-icons" : ["󰤟", "󰤢", "󰤥", "󰤨"],
+		"format-disconnected": "󰖪 ",
+		"format-icons" : ["󰤟 ", "󰤢 ", "󰤥 ", "󰤨 "],
 		"tooltip-format": "{ifname} via {gwaddr} 󰊗",
 		"tooltip-format-wifi": "{essid} ({signalStrength}%)  ",
 		"tooltip-format-ethernet": "{ipaddr}/{cidr} {ifname} 󰈀 ",
@@ -121,20 +121,21 @@
 		"max-length": 50
 	},
 	"backlight": {
-		"format": "{icon} {percent}",
-		"format-icons": ["", ""],
+		"format": "{icon}",
+		"format-icons": ["󰃚", "󰃛", "󰃝", "󰃞", "󰃟", "󰃠"],
 		"on-scroll-up": "~/.config/hypr/scripts/backlight.sh inc",
 		"on-scroll-down": "~/.config/hypr/scripts/backlight.sh dec",
+		"tooltip-format": "{percent}%"
 	},
 	"wireplumber": {
-		"format": "{icon} {volume:2}",
+		"format": "{icon}",
 		"format-bluetooth": "{icon}  {volume}",
 		"format-muted": "MUTE",
 		"format-icons": {
-			"headphones": "",
+			"headphones": " ",
 			"default": [
-				"",
-				""
+				" ",
+				" "
 			]
 		},
 		"tooltip-format": "{node_name}   {volume:2}",
@@ -144,15 +145,18 @@
 	},
 	"memory": {
 		"interval": 5,
-		"format": " {}"
+		"format": " ",
+		"tooltip-format": "{percentage}%"
 	},
 	"cpu": {
 		"interval": 5,
-		"format": " {usage:2}"
+		"format": "{icon}",
+		"format-icons": ["󰾆 ", "󰾅 ", "󰓅 "],
 	},
 	"temperature": {
-		"format": "{icon} {temperatureC}°C",
+		"format": "{icon}",
 		"format-icons": ["", "", "", "", ""],
+		"tooltip-format": "{temperatureC}°C"
 	},
 	"battery": {
 		"states": {
@@ -160,25 +164,27 @@
 			"warning": 30,
 			"critical": 15
 		},
-		"format": "{icon} {capacity}",
+		"format": "{icon}",
 		"format-icons": [
-			"",
-			"",
-			"",
-			"",
-			""
+			" ",
+			" ",
+			" ",
+			" ",
+			" "
 		],
 		"tooltip": true,
 		"tooltip-format": "{timeTo}\nPower: {power}\nCapacity: {capacity}\nHealth: {health}\nCycles: {cycles}"
 	},
 	"disk": {
 		"interval": 5,
-		"format": " {percentage_used:2}",
-		"path": "/"
+		"format": " ",
+		"path": "/",
+		"tooltip-format": "{used} ({percentage_used:2}%) of {total}"
 	},
 	"tray": {
 		"icon-size": 20
 	},
+
 	"custom/notification": {
 		"tooltip": false,
 		"format": "{icon}",

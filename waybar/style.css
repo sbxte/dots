@@ -88,5 +88,5 @@ window#waybar {
 #disk,
 #tray,
 #custom-notification {
-	padding: 0 10px;
+	padding: 0 10 0 10px;
 }

@@ -130,10 +130,11 @@
 	"wireplumber": {
 		"format": "{icon}",
 		"format-bluetooth": "{icon}  {volume}",
-		"format-muted": "MUTE",
+		"format-muted": " ",
 		"format-icons": {
 			"headphones": " ",
 			"default": [
+				" ",
 				" ",
 				" "
 			]

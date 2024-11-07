@@ -59,7 +59,7 @@ case $ID in
 arch)
 	sudo pacman -S --noconfirm --needed base-devel git zsh neovim alacritty \
 		gdm hyprland swaync waybar nautilus wofi hyprpaper pipewire wireplumber \
-		nerd-fonts acpilight ibus exa eza tlp playerctl
+		nerd-fonts acpilight ibus exa eza tlp playerctl bluez bluez-utils
 	if ! command -v yay &>/dev/null; then
 		pacman -S --needed git base-devel
 		git clone https://aur.archlinux.org/yay-bin.git

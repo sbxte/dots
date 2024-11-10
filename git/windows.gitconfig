@@ -23,6 +23,8 @@
 [mergetool "vscode"]
 	cmd = code --wait $MERGED
 	trustExitCode = true
+[rebase]
+	autoSquash = true
 [alias]
 	alias = config --get-regexp alias
 

@@ -51,8 +51,7 @@
 	rls = rlf -8
 	rl = rlfas
 
-	sh = "show --format='%C(bold blue)%H %n%C(auto)%D %n%C(reset)%s'"
-		# shf = "show --format='oneline'"
+	sh = "show --format='%C(bold blue)%H %nc: %C(white)%cn %C(bold green)(%ch) %na: %C(white)%an %C(bold green)(%ah) %n%C(auto)%D %n%C(reset)%s'"
 
 	f = fetch
 	af = fetch --all

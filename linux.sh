@@ -27,6 +27,7 @@ link git/linux.gitconfig ~ .gitconfig
 
 # ZSH
 link zsh/.zshrc ~ .zshrc
+link omz ~/.oh-my-zsh/ custom
 
 # TMUX
 link tmux/.tmux.conf ~/.config/ .tmux.conf

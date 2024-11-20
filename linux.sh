@@ -53,26 +53,37 @@ link cava ~/.config cava
 # Wall papers
 link wallpapers ~ wallpapers
 
+#
+# Additional options
+#
+if [ "$#" -eq 0 ]; then
+	exit
+fi
+
 # Install needed packages
-. /etc/os-release
+if [[ "$1" -eq "i" || "$1" -eq "install" ]]; then
+	echo "Installing needed packages"
 
-case $ID in
-arch)
-	sudo pacman -S --noconfirm --needed base-devel git zsh neovim alacritty \
-		gdm hyprland swaync waybar nautilus wofi hyprpaper pipewire wireplumber \
-		nerd-fonts acpilight ibus exa eza tlp playerctl bluez bluez-utils
-	if ! command -v yay &>/dev/null; then
-		pacman -S --needed git base-devel
-		git clone https://aur.archlinux.org/yay-bin.git
-		cd yay-bin
-		makepkg -si
-		cd ..
-		rm -rf yay-bin
-	fi
-	sudo yay -S --noconfirm --needed hyprshot ibus-daemon xwaylandvideobridge bluetui
-	;;
+	. /etc/os-release
 
-*)
-	echo "Hmm, new distro?"
-	;;
-esac
+	case $ID in
+	arch)
+		sudo pacman -S --noconfirm --needed base-devel git zsh neovim alacritty \
+			gdm hyprland swaync waybar nautilus wofi hyprpaper pipewire wireplumber \
+			nerd-fonts acpilight ibus exa eza tlp playerctl bluez bluez-utils
+		if ! command -v yay &>/dev/null; then
+			pacman -S --needed git base-devel
+			git clone https://aur.archlinux.org/yay-bin.git
+			cd yay-bin
+			makepkg -si
+			cd ..
+			rm -rf yay-bin
+		fi
+		sudo yay -S --noconfirm --needed hyprshot ibus-daemon xwaylandvideobridge bluetui
+		;;
+
+	*)
+		echo "Hmm, new distro?"
+		;;
+	esac
+fi

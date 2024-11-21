@@ -1,3 +1,9 @@
+# 
+# PATH 
+#
+
+export PATH=~/.local/bin:$PATH
+
 #
 # OH MY ZSH 
 #

@@ -22,6 +22,9 @@ link() {
 	ln -rsf "$TARGET" "$FULL_LINK"
 }
 
+# BASH
+link bash/.bashrc ~ .bashrc
+
 # GIT
 link git/linux.gitconfig ~ .gitconfig
 

@@ -19,18 +19,18 @@ run_eww() {
 		clock \
 		uptime \
 		music \
-		github \
-		reddit \
-		twitter \
-		youtube \
 		weather \
 		apps \
-		mail \
 		logout \
 		sleep \
 		reboot \
 		poweroff \
 		folders
+	# mail \
+	# github \
+	# reddit \
+	# twitter \
+	# youtube \
 }
 
 ## Launch or close widgets accordingly

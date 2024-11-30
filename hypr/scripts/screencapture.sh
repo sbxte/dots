@@ -1,5 +1,12 @@
 #!/usr/bin/env bash
 
+function notify_video() {
+	if ! command -v notify-send 2>&1 >/dev/null; then
+		exit 1
+	fi
+	notify-send "Screen captured video" -t 5000 -a "wf-recorder"
+}
+
 if [[ $1 == "image" ]]; then
 	if ! command -v hyprshot 2>&1 >/dev/null; then
 		exit 1
@@ -17,6 +24,7 @@ elif [[ $1 == "video" ]]; then
 
 	if [[ ! -z $(pgrep wf-recorder) ]]; then
 		pkill wf-recorder
+		notify_video
 		exit
 	fi
 

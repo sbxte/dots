@@ -32,6 +32,9 @@ link git/linux.gitconfig ~ .gitconfig
 link zsh/.zshrc ~ .zshrc
 link omz ~ .omz-custom
 
+# Nushell
+link nushell ~/.config nushell
+
 # TMUX
 link tmux/.tmux.conf ~/.config/ .tmux.conf
 

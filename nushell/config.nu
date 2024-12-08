@@ -903,6 +903,13 @@ $env.config = {
 # Other stuff 
 #
 
+# Paths
+$env.PATH = (
+	$env.PATH 
+	| split row (char esep) 
+	| prepend $"($env.HOME)/.cargo/bin" # Cargo 
+)
+
 # Zoxide
 source ~/.zoxide.nu
 

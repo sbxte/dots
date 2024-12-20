@@ -117,4 +117,4 @@ $env.NU_PLUGIN_DIRS = [
 #
 
 # Zoxide
-zoxide init nushell | save -f ~/.zoxide.nu
+zoxide init --hook prompt nushell | save -f ~/.zoxide.nu

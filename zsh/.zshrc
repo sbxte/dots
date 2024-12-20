@@ -127,7 +127,7 @@ source $ZSH/oh-my-zsh.sh
 export PATH=$PATH:/opt/homebrew/bin
 
 # ZOXIDE (Better cd)
-eval "$(zoxide init zsh)"
+eval "$(zoxide init --hook prompt zsh)"
 
 # NeoVim
 export PATH="$PATH:/opt/nvim-linux64/bin"

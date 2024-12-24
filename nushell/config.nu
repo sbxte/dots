@@ -913,6 +913,13 @@ $env.PATH = (
 # Zoxide
 source ~/.zoxide.nu
 
+#
+# Completions 
+#
+
+source ~/.config/nushell/nu_scripts/custom-completions/git/git-completions.nu
+# source ~/.config/nushell/nu_scripts/custom-completions/cargo/cargo-completions.nu
+
 # 
 # Aliases
 #

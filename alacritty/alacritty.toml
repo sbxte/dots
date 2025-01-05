@@ -33,4 +33,4 @@ size = 10
 
 # Terminal 
 [terminal]
-shell = "/usr/bin/nu"
+shell = "/usr/bin/zsh"

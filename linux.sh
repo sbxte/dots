@@ -38,6 +38,9 @@ link nushell ~/.config nushell
 # TMUX
 link tmux/.tmux.conf ~/.config/ .tmux.conf
 
+# Systemd
+link systemd ~/.config systemd
+
 # Neovim
 link nvim ~/.config nvim
 

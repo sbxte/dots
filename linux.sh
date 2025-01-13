@@ -1,8 +1,5 @@
 #!/usr/bin/env bash
 
-# Ask for password upfront
-sudo -v
-
 # Sym link helper
 link() {
 	TARGET=$1
@@ -22,55 +19,61 @@ link() {
 	ln -rsf "$TARGET" "$FULL_LINK"
 }
 
-# BASH
-link bash/.bashrc ~ .bashrc
+symlink() {
+	#
+	# .config
+	#
 
-# GIT
-link git/linux.gitconfig ~ .gitconfig
+	echo "Creating .config symlinks..."
 
-# ZSH
-link zsh/.zshrc ~ .zshrc
-link omz ~ .omz-custom
+	# BASH
+	link bash/.bashrc ~ .bashrc
 
-# Nushell
-link nushell ~/.config nushell
+	# GIT
+	link git/linux.gitconfig ~ .gitconfig
 
-# TMUX
-link tmux/.tmux.conf ~/.config/ .tmux.conf
+	# ZSH
+	link zsh/.zshrc ~ .zshrc
+	link omz ~ .omz-custom
 
-# Systemd
-link systemd ~/.config systemd
+	# Nushell
+	link nushell ~/.config nushell
 
-# Neovim
-link nvim ~/.config nvim
+	# TMUX
+	link tmux/.tmux.conf ~/.config/ .tmux.conf
 
-# Alacritty
-link alacritty ~/.config/ alacritty
+	# Systemd
+	link systemd ~/.config systemd
 
-# Hyprland
-link hypr ~/.config hypr
-link swaync ~/.config swaync
-link waybar ~/.config waybar
+	# Neovim
+	link nvim ~/.config nvim
 
-# Cava
-link cava ~/.config cava
+	# Alacritty
+	link alacritty ~/.config/ alacritty
 
-#
-# MISC
-#
+	# Hyprland
+	link hypr ~/.config hypr
+	link swaync ~/.config swaync
+	link waybar ~/.config waybar
 
-# Wall papers
-link wallpapers ~ wallpapers
+	# Cava
+	link cava ~/.config cava
 
-#
-# Additional options
-#
-if [ "$#" -eq 0 ]; then
-	exit
-fi
+	echo "Finished creating .config symlinks!"
 
-# Install needed packages
-if [[ "$1" -eq "i" || "$1" -eq "install" ]]; then
+	#
+	# MISC
+	#
+
+	echo "Creating additional symlinks..."
+
+	# Wall papers
+	link wallpapers ~ wallpapers
+
+	echo "Finished creating additional symlinks!"
+}
+
+install() {
 	echo "Installing needed packages"
 
 	. /etc/os-release
@@ -95,4 +98,26 @@ if [[ "$1" -eq "i" || "$1" -eq "install" ]]; then
 		echo "Hmm, new distro?"
 		;;
 	esac
+}
+
+#
+# Actual script lol
+#
+
+if [ "$#" -eq 0 ]; then
+	echo "Run with install, or symlink"
+	exit
+fi
+
+# Ask for password upfront
+sudo -v
+
+if [[ "$1" == "s" || "$1" == "symlink" ]]; then
+	symlink
+	exit
+fi
+
+if [[ "$1" == "i" || "$1" == "install" ]]; then
+	install
+	exit
 fi

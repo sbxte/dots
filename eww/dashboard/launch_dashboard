@@ -18,14 +18,14 @@ run_eww() {
 		system \
 		clock \
 		uptime \
-		music \
-		weather \
-		apps \
 		logout \
 		sleep \
 		reboot \
 		poweroff \
 		folders
+	# weather \
+	# music \
+	# apps \
 	# mail \
 	# github \
 	# reddit \

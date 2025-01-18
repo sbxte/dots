@@ -91,7 +91,7 @@ install() {
 			cd ..
 			rm -rf yay-bin
 		fi
-		sudo yay -S --noconfirm --needed hyprshot ibus-daemon xwaylandvideobridge bluetui
+		sudo yay -S --noconfirm --needed uwsm hyprshot ibus-daemon xwaylandvideobridge bluetui
 		;;
 
 	*)

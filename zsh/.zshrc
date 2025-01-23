@@ -123,14 +123,8 @@ source $ZSH/oh-my-zsh.sh
 # ZSH CONF
 #
 
-# Homebrew
-export PATH=$PATH:/opt/homebrew/bin
-
 # ZOXIDE (Better cd)
 eval "$(zoxide init --hook prompt zsh)"
-
-# NeoVim
-export PATH="$PATH:/opt/nvim-linux64/bin"
 
 # SSH Agent
 if ! [[ -v SSH_AUTH_SOCK ]]; then

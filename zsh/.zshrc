@@ -1,11 +1,11 @@
-# 
-# PATH 
+#
+# PATH
 #
 
 export PATH=~/.local/bin:$PATH
 
 #
-# OH MY ZSH 
+# OH MY ZSH
 #
 
 # If you come from bash you might have to change your $PATH.

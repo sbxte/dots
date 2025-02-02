@@ -112,7 +112,7 @@ $env.NU_PLUGIN_DIRS = [
 
 
 
-# 
+#
 # MISC
 #
 

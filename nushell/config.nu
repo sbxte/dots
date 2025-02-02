@@ -899,27 +899,27 @@ $env.config = {
 }
 
 
-# 
-# Other stuff 
+#
+# Other stuff
 #
 
 # Paths
 $env.PATH = (
-	$env.PATH 
-	| split row (char esep) 
-	| prepend $"($env.HOME)/.cargo/bin" # Cargo 
+	$env.PATH
+	| split row (char esep)
+	| prepend $"($env.HOME)/.cargo/bin" # Cargo
 )
 
 # Zoxide
 source ~/.zoxide.nu
 
 #
-# Completions 
+# Completions
 #
 
 source ~/.cache/carapace/init.nu
 
-# 
+#
 # Aliases
 #
 

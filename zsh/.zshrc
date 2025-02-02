@@ -137,6 +137,8 @@ export GPG_TTY=$(tty)
 # Homebrew
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
+# Carapace (completion)
+source <(carapace _carapace)
 
 #
 # Aliases and Binds

@@ -116,5 +116,9 @@ $env.NU_PLUGIN_DIRS = [
 # MISC
 #
 
+# Carapace
+mkdir ~/.cache/carapace
+carapace _carapace nushell | save --force ~/.cache/carapace/init.nu
+
 # Zoxide
 zoxide init --hook prompt nushell | save -f ~/.zoxide.nu

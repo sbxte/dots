@@ -917,8 +917,7 @@ source ~/.zoxide.nu
 # Completions 
 #
 
-source ~/.config/nushell/nu_scripts/custom-completions/git/git-completions.nu
-# source ~/.config/nushell/nu_scripts/custom-completions/cargo/cargo-completions.nu
+source ~/.cache/carapace/init.nu
 
 # 
 # Aliases

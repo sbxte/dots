@@ -31,6 +31,6 @@ white = '0xa6b3cc'
 normal = { family = "JetBrainsMono Nerd Font", style = "Regular" }
 size = 10
 
-# Terminal 
+# Terminal
 [terminal]
-shell = "/usr/bin/zsh"
+shell = "/usr/bin/nu"

@@ -80,6 +80,9 @@
 	s = status
 	si = switch
 	br = branch
+	d = diff
+	ps = push
+	pl = pull
 
 	com = commit
 	acom = "!git add -A && git commit"

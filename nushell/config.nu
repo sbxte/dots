@@ -924,3 +924,4 @@ source ~/.cache/carapace/init.nu
 #
 
 alias e = nvim
+alias g = git

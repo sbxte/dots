@@ -84,6 +84,7 @@
 	ps = push
 	pl = pull
 
+	c = commit
 	com = commit
 	acom = "!git add -A && git commit"
 	icom = "!git add -i && git commit"

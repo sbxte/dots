@@ -145,6 +145,11 @@ let light_theme = {
 #     carapace $spans.0 nushell ...$spans | from json
 # }
 
+# For more information on available settings:
+# https://github.com/nushell/nushell/blob/main/crates/nu-utils/src/default_files/doc_config.nu
+# or run:
+# config nu --doc | nu-highlight | bat -p
+
 # The default config record. This is where much of your global configuration is setup.
 $env.config = {
     show_banner: false # true or false to enable or disable the welcome banner at startup

@@ -37,6 +37,20 @@ link() {
 	fi
 }
 
+# Copy helper
+copy() {
+	TARGET=$1
+	DIR=$2
+
+	if cp -rf "$TARGET" "$DIR" 2>/dev/null; then
+		echo "Copied $TARGET -> $DIR"
+	else
+		sudo -v
+		sudo cp -rf "$TARGET" "$DIR"
+		echo "(sudo) Copied $TARGET -> $DIR"
+	fi
+}
+
 config() {
 	#
 	# .config

@@ -53,6 +53,17 @@ copy() {
 
 config() {
 	#
+	# /etc
+	#
+
+	echo "Copying configs /etc"
+
+	# Greetd
+	copy greetd /etc
+
+	echo "Finished copying configs to /etc!"
+
+	#
 	# .config
 	#
 

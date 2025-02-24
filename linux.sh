@@ -9,14 +9,32 @@ link() {
 
 	# Remove link if it exists
 	if [ -f "$FULL_LINK" ]; then
-		rm "$FULL_LINK"
+		if rm -f "$FULL_LINK" 2>/dev/null; then
+			echo "Removed file $FULL_LINK"
+		else
+			sudo -v
+			sudo rm -f "$FULL_LINK"
+			echo "(sudo) Removed file $FULL_LINK"
+		fi
 	elif [ -d "$FULL_LINK" ]; then
-		rm -rf "$FULL_LINK"
+		if rm -rf "$FULL_LINK" 2>/dev/null; then
+			echo "Removed dir $FULL_LINK"
+		else
+			sudo -v
+			sudo rm -rf "$FULL_LINK"
+			echo "(sudo) Removed dir $FULL_LINK"
+		fi
 	fi
 
 	# Create symbolic link
 	mkdir -p "$DIR"
-	ln -rsf "$TARGET" "$FULL_LINK"
+	if ln -rsf "$TARGET" "$FULL_LINK" 2>/dev/null; then
+		echo "Created symlink $FULL_LINK -> $TARGET"
+	else
+		sudo -v
+		sudo ln -rsf "$TARGET" "$FULL_LINK"
+		echo "(sudo) Created symlink $FULL_LINK -> $TARGET"
+	fi
 }
 
 symlink() {
@@ -110,6 +128,10 @@ if [ "$#" -eq 0 ]; then
 fi
 
 # Ask for password upfront
+if command -v sudo 2>&1 >/dev/null; then
+	echo "Sudo not found!"
+	exit
+fi
 sudo -v
 
 if [[ "$1" == "s" || "$1" == "symlink" ]]; then

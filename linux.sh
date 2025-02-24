@@ -37,7 +37,7 @@ link() {
 	fi
 }
 
-symlink() {
+config() {
 	#
 	# .config
 	#
@@ -123,7 +123,7 @@ install() {
 #
 
 if [ "$#" -eq 0 ]; then
-	echo "Run with install, or symlink"
+	echo "Run with install, or config"
 	exit
 fi
 
@@ -134,8 +134,8 @@ if ! command -v sudo 2>&1 >/dev/null; then
 fi
 sudo -v
 
-if [[ "$1" == "s" || "$1" == "symlink" ]]; then
-	symlink
+if [[ "$1" == "c" || "$1" == "config" ]]; then
+	config
 	exit
 fi
 

@@ -128,7 +128,7 @@ if [ "$#" -eq 0 ]; then
 fi
 
 # Ask for password upfront
-if command -v sudo 2>&1 >/dev/null; then
+if ! command -v sudo 2>&1 >/dev/null; then
 	echo "Sudo not found!"
 	exit
 fi

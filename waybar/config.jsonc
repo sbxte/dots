@@ -88,7 +88,7 @@
 		}
 	},
 	"clock#3": {
-		"format": "{:%m-%d}",
+		"format": "{:%d-%m-%y}",
 		"timezone": "Asia/Jakarta",
 		"tooltip": true,
 		"tooltip-format": "<tt><small>{calendar}</small></tt>",

@@ -67,7 +67,7 @@ config() {
 	# .config
 	#
 
-	echo "Creating .config symlinks..."
+	echo "Creating .config and ~ symlinks..."
 
 	# BASH
 	link bash/.bashrc ~ .bashrc
@@ -105,7 +105,7 @@ config() {
 	# XCompose
 	link xcompose/.XCompose ~ .XCompose
 
-	echo "Finished creating .config symlinks!"
+	echo "Finished creating .config and ~ symlinks!"
 
 	#
 	# MISC

@@ -102,6 +102,9 @@ config() {
 	# Cava
 	link cava ~/.config cava
 
+	# XCompose
+	link xcompose/.XCompose ~ .XCompose
+
 	echo "Finished creating .config symlinks!"
 
 	#

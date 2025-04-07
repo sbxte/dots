@@ -58,6 +58,9 @@ config() {
 
 	echo "Copying configs /etc"
 
+	# Root systemd
+	link systemd/system/user-sleep@.service /etc/systemd/system user-sleep@.service
+
 	# Greetd
 	copy greetd /etc
 
@@ -85,8 +88,8 @@ config() {
 	# TMUX
 	link tmux/.tmux.conf ~/.config/ .tmux.conf
 
-	# Systemd
-	link systemd ~/.config systemd
+	# User Systemd
+	link systemd/user ~/.config/systemd user
 
 	# Neovim
 	link nvim ~/.config nvim

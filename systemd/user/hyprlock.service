@@ -1,0 +1,10 @@
+[Unit]
+Description=Lock with hyprlock
+Before=sleep.target
+
+[Service]
+Type=exec
+ExecStart=/usr/bin/hyprlock --no-fade-in
+
+[Install]
+WantedBy=sleep.target

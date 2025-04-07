@@ -1,0 +1,14 @@
+# NOTE: Sym linked in linux.sh,
+# make sure to update when file or path is renamed
+
+[Unit]
+Description=Call user's sleep target before system sleep
+Before=sleep.target suspend.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/systemctl --user --machine=%i@ start --wait sleep.target
+ExecStartPost=/usr/bin/sleep 0.6s
+
+[Install]
+WantedBy=sleep.target

@@ -31,6 +31,10 @@ white = '0xffffff'
 normal = { family = "JetBrainsMono Nerd Font", style = "Regular" }
 size = 10
 
+# Window
+[window]
+opacity = 0.85
+
 # Terminal
 [terminal]
 shell = "/usr/bin/nu"

@@ -1,38 +1,41 @@
 * {
-	font-size: 20px;
+	background: @background;
+	color: @foreground;
+
+	font-size: 16px;
 	font-family: "JetBrainsMono NF";
+
+	border-radius: 0;
+	border: none;
+	min-height: 0;
 }
 
-window#waybar {
-	background: #292b2e;
-	color: #fdf6e3;
+.modules-left {
+	/*margin-left: 8px;*/
+	padding: 7px;
+	margin:6 0 1 10;
+	border-radius:10px;
+	background: alpha(black,.6);
+	box-shadow: none;
+	/*border: 2px solid;
+	animation: rainbow-border 8s infinite linear;*/
 }
 
-#custom-right-arrow-dark,
-#custom-left-arrow-dark {
-	color: #1a1a1a;
-}
-#custom-right-arrow-light,
-#custom-left-arrow-light {
-	color: #292b2e;
-	background: #1a1a1a;
+.modules-right {
+	/*margin-right: 8px;*/
+	padding: 7px;
+	margin:6 10 1 0;
+	border-radius: 10px;
+	background: alpha(black,.6);
+	box-shadow: none;
 }
 
-#workspaces,
-#clock.1,
-#clock.2,
-#clock.3,
-#network,
-#backlight,
-#wireplumber,
-#memory,
-#cpu,
-#battery,
-#temperature,
-#disk,
-#tray,
-#custom-notification {
-	background: #1a1a1a;
+.modules-center {
+	padding:7px;
+	margin:6 0 1 0;
+	border-radius:10px;
+	background: alpha(black,.6);
+	box-shadow: none;
 }
 
 #workspaces button {
@@ -52,11 +55,18 @@ window#waybar {
 	padding: 0 8px;
 }
 
+tooltip {
+	border-radius: 5px;
+	background: alpha(black,.6);
+	box-shadow:none;
+}
+
 #network {
-	color: #fa5246;
+	color: #6c71c4;
 }
 #backlight {
-	color: #21ff90;
+	/* Color using format-icon spans in config.jsonc*/
+	/* color: #21ff90; */
 }
 #wireplumber {
 	color: #268bd2;
@@ -65,28 +75,27 @@ window#waybar {
 	color: #2aa198;
 }
 #cpu {
-	color: #6c71c4;
+	/* Color using format-icon spans in config.jsonc*/
+	/* color: #6c71c4; */
 }
 #battery {
 	color: #859900;
 }
-#temperature {
-	color: #9beb26;
+#battery.warning {
+	color: #859900;
 }
-#disk {
-	color: #eeeeee;
+#battery.critical, #network.disconnected, #wireplumber.muted, #wireplumber.sink-muted, #wireplumber.source-muted {
+	color: #fa5246;
 }
 
 #clock,
 #network,
 #backlight,
 #wireplumber,
-#memory,
 #cpu,
 #battery,
-#temperature,
 #disk,
 #tray,
 #custom-notification {
-	padding: 0 10 0 10px;
+	padding: 0 8 0 8px;
 }

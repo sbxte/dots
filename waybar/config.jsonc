@@ -6,53 +6,21 @@
 
 	"modules-left": [
 		"hyprland/workspaces",
-		"custom/right-arrow-dark"
 	],
 	"modules-center": [
-		"custom/left-arrow-dark",
 		"custom/notification",
-		"custom/left-arrow-light",
-		"custom/left-arrow-dark",
 		"clock#1",
-		"custom/left-arrow-light",
-		"custom/left-arrow-dark",
 		"clock#2",
-		"custom/right-arrow-dark",
-		"custom/right-arrow-light",
 		"clock#3",
-		"custom/right-arrow-dark"
 	],
 	"modules-right": [
-		"custom/left-arrow-dark",
 		"tray",
-		"custom/left-arrow-light",
-		"custom/left-arrow-dark",
 		"network",
 		"backlight",
 		"wireplumber",
-		"memory",
-		"cpu",
-		"temperature",
 		"battery",
-		"disk"
+		"cpu"
 	],
-
-	"custom/left-arrow-dark": {
-		"format": "",
-		"tooltip": false
-	},
-	"custom/left-arrow-light": {
-		"format": "",
-		"tooltip": false
-	},
-	"custom/right-arrow-dark": {
-		"format": "",
-		"tooltip": false
-	},
-	"custom/right-arrow-light": {
-		"format": "",
-		"tooltip": false
-	},
 
 	"hyprland/workspaces": {
 		"on-scroll-up": "hyprctl dispatch workspace e+1",
@@ -113,7 +81,12 @@
 		"format-wifi": "{icon}",
 		"format-ethernet": "󰈀 Eth",
 		"format-disconnected": "󰖪 ",
-		"format-icons" : ["󰤟 ", "󰤢 ", "󰤥 ", "󰤨 "],
+		"format-icons" : [
+			"󰤟",
+			"󰤢",
+			"󰤥",
+			"󰤨"
+		],
 		"tooltip-format": "{ifname} via {gwaddr} 󰊗",
 		"tooltip-format-wifi": "{essid} ({signalStrength}%)  ",
 		"tooltip-format-ethernet": "{ipaddr}/{cidr} {ifname} 󰈀 ",
@@ -122,7 +95,14 @@
 	},
 	"backlight": {
 		"format": "{icon}",
-		"format-icons": ["󰃚", "󰃛", "󰃝", "󰃞", "󰃟", "󰃠"],
+		"format-icons": [
+			"<span color='#f6e81e'>󰃚</span>",
+			"<span color='#f6e81e'>󰃛</span>",
+			"<span color='#f9f170'>󰃝</span>",
+			"<span color='#fbf599'>󰃞</span>",
+			"<span color='#fdf9c2'>󰃟</span>",
+			"<span color='#fefdeb'>󰃠</span>"
+		],
 		"on-scroll-up": "~/.config/hypr/scripts/backlight.sh inc",
 		"on-scroll-down": "~/.config/hypr/scripts/backlight.sh dec",
 		"tooltip-format": "{percent}%"
@@ -134,9 +114,11 @@
 		"format-icons": {
 			"headphones": " ",
 			"default": [
-				" ",
-				" ",
-				" "
+				"<span color='#ff6914'></span>",
+				"<span color='#ffbe11'></span>",
+				"<span color='#eaff0f'></span>",
+				"<span color='#91ff0d'></span>",
+				"<span color='#37ff0a'></span>"
 			]
 		},
 		"tooltip-format": "{node_name}   {volume:2}",
@@ -152,7 +134,13 @@
 	"cpu": {
 		"interval": 5,
 		"format": "{icon}",
-		"format-icons": ["󰾆 ", "󰾅 ", "󰓅 "],
+		"format-icons": [
+			"<span color='#fee9e7'>󰾆</span>",
+			"<span color='#fbbdb6'>󰾅</span>",
+			"<span color='#f99186'>󰾅</span>",
+			"<span color='#f66555'>󰓅</span>",
+			"<span color='#f43925'>󰓅</span>"
+		],
 	},
 	"temperature": {
 		"format": "{icon}",
@@ -167,11 +155,11 @@
 		},
 		"format": "{icon}",
 		"format-icons": [
-			" ",
-			" ",
-			" ",
-			" ",
-			" "
+			"",
+			"",
+			"",
+			"",
+			""
 		],
 		"tooltip": true,
 		"tooltip-format": "{timeTo}\nPower: {power}\nCapacity: {capacity}\nHealth: {health}\nCycles: {cycles}"

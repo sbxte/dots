@@ -80,7 +80,7 @@
 		"format": "{ifname}",
 		"format-wifi": "{icon}",
 		"format-ethernet": "󰈀 Eth",
-		"format-disconnected": "󰖪 ",
+		"format-disconnected": "󰖪",
 		"format-icons" : [
 			"󰤟",
 			"󰤢",
@@ -110,9 +110,9 @@
 	"wireplumber": {
 		"format": "{icon}",
 		"format-bluetooth": "{icon}  {volume}",
-		"format-muted": " ",
+		"format-muted": "",
 		"format-icons": {
-			"headphones": " ",
+			"headphones": "",
 			"default": [
 				"<span color='#ff6914'></span>",
 				"<span color='#ffbe11'></span>",
@@ -128,7 +128,7 @@
 	},
 	"memory": {
 		"interval": 5,
-		"format": " ",
+		"format": "",
 		"tooltip-format": "{percentage}%"
 	},
 	"cpu": {
@@ -166,7 +166,7 @@
 	},
 	"disk": {
 		"interval": 5,
-		"format": " ",
+		"format": "",
 		"path": "/",
 		"tooltip-format": "{used} ({percentage_used:2}%) of {total}"
 	},

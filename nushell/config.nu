@@ -940,6 +940,8 @@ source ~/.cache/carapace/init.nu
 alias e = nvim
 alias g = git
 
+alias t = tuecli
+
 #
 # Misc
 #

@@ -52,7 +52,7 @@
 	rl = rlfas
 
 
-	sh = "show --format='%C(bold blue)%H %nc: %C(white)%cn %C(bold green)(%ch) %na: %C(white)%an %C(bold green)(%ah) %n%C(auto)%D %n%C(reset)%s'"
+	sh = "show --format='%C(bold blue)%H %nc: %C(white)%cN <%cE> %C(bold green)(%ch) %na: %C(white)%aN <%aE> %C(bold green)(%ah) %n%C(auto)%D %n%C(reset)%s'"
 
 	f = fetch
 	fa = fetch --all

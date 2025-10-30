@@ -51,27 +51,56 @@
 	rls = rlf -8
 	rl = rlfas
 
+
 	sh = "show --format='%C(bold blue)%H %nc: %C(white)%cn %C(bold green)(%ch) %na: %C(white)%an %C(bold green)(%ah) %n%C(auto)%D %n%C(reset)%s'"
 
 	f = fetch
-	af = fetch --all
-	ab = branch --all
+	fa = fetch --all
+
 	a = add
 	aa = add -A
 	as = !git add -A && git stash
 	addn = add -N -A
 	addi = add -i
 	addp = add -p
-	reseti = reset -p
-	restores = restore --staged
 
 	merges = merge --squash
+	m = merge
+	ms = merge --squash
+
+	pl = pull
 
 	pushf = push --force
 	pushd = push -d
+	ps = push
+	psf = push --force
+	psd = push -d
 
+	rs = reset
+	rsi = reset -p
+	rsh = reset --hard
+	rss = reset --soft
+	reseti = reset -p
 	reseth = reset --hard
 	resets = reset --soft
+
+	rst = restore
+	rsts = restore --staged
+	restores = restore --staged
+
+	b = branch
+	ba = branch -a
+	bd = branch -D
+	bf = branch -f
+	bm = branch -m
+	branchd = branch -D
+	branchf = branch -f
+	branchm = branch -m
+
+	d = diff
+	dt = difftool
+	difft = difftool
+	merget = mergetool
 
 	main = !git switch main -q || git switch master -q
 
@@ -79,23 +108,14 @@
 	ch = checkout
 	s = status
 	si = switch
-	br = branch
-	d = diff
-	ps = push
-	pl = pull
 
 	c = commit
+	ac = "!git add -A && git commit"
 	com = commit
 	acom = "!git add -A && git commit"
 	icom = "!git add -i && git commit"
 	ecom = commit --allow-empty
 	amcom = commit --amend --no-edit
-
-	difft = difftool
-	merget = mergetool
-	branchd = branch -D
-	branchf = branch -f
-	branchm = branch -m
 [color]
 	diff = true
 	status = always

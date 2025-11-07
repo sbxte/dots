@@ -98,6 +98,7 @@
 	branchm = branch -m
 
 	d = diff
+	dc = diff --cached
 	dt = difftool
 	difft = difftool
 	merget = mergetool

@@ -68,6 +68,9 @@
 	m = merge
 	ms = merge --squash
 
+	rb = rebase
+	rbi = rebase -i
+
 	pl = pull
 
 	pushf = push --force
@@ -75,6 +78,7 @@
 	ps = push
 	psf = push --force
 	psd = push -d
+	psa = push --all
 
 	rs = reset
 	rsi = reset -p
@@ -102,6 +106,8 @@
 	dt = difftool
 	difft = difftool
 	merget = mergetool
+
+	re = remote
 
 	main = !git switch main -q || git switch master -q
 

@@ -109,6 +109,8 @@
 
 	re = remote
 
+	st = stash
+
 	main = !git switch main -q || git switch master -q
 
 	pick = cherry-pick
@@ -118,6 +120,7 @@
 
 	c = commit
 	ac = "!git add -A && git commit"
+	cm = commit --amend --no-edit
 	com = commit
 	acom = "!git add -A && git commit"
 	icom = "!git add -i && git commit"

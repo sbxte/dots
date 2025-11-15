@@ -116,12 +116,14 @@
 	sta = stash apply
 	std = stash drop
 
+	si = switch
+	sic = switch -c
+
 	main = !git switch main -q || git switch master -q
 
 	pick = cherry-pick
 	ch = checkout
 	s = status
-	si = switch
 
 	c = commit
 	ac = "!git add -A && git commit"

@@ -168,8 +168,6 @@
 	gpgsign = true
 [safe]
 	directory = *
-[gpg "ssh"]
-	allowedSignersFile = C:/Users/Daniel/allowed_signers
 [fetch]
 	writeCommitGraph = true
 [rerere]

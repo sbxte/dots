@@ -168,8 +168,6 @@
 	gpgsign = true
 [safe]
 	directory = *
-[gpg "ssh"]
-	allowedSignersFile = C:/Users/Daniel/allowed_signers
 [fetch]
 	writeCommitGraph = true
 [rerere]
@@ -192,3 +190,5 @@
 
 [gpg]
 	program = "C:\\Program Files (x86)\\GnuPG\\bin\\gpg.exe"
+[gpg "ssh"]
+	allowedSignersFile = C:/Users/Daniel/allowed_signers

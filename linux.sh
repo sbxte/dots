@@ -108,6 +108,9 @@ config() {
 	# XCompose
 	link xcompose/.XCompose ~ .XCompose
 
+	# Clangd
+	link clangd ~/.config clangd
+
 	echo "Finished creating .config and ~ symlinks!"
 
 	#

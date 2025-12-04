@@ -1,0 +1,7 @@
+# Clangd Configuration File
+
+Completion:
+  ArgumentLists: None
+
+InlayHints:
+  Enabled: false

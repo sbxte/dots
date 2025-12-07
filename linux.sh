@@ -111,6 +111,9 @@ config() {
 	# Clangd
 	link clangd ~/.config clangd
 
+	# GNU 
+	link gnu/.gdbinit ~ .gdbinit
+
 	echo "Finished creating .config and ~ symlinks!"
 
 	#

@@ -117,8 +117,9 @@ $env.NU_PLUGIN_DIRS = [
 #
 
 # Carapace
-mkdir ~/.cache/carapace
-carapace _carapace nushell | save --force ~/.cache/carapace/init.nu
+# $env.CARAPACE_BRIDGES = 'zsh,fish,bash,inshellisense' # optional
+mkdir $"($nu.cache-dir)"
+carapace _carapace nushell | save --force $"($nu.cache-dir)/carapace.nu"
 
 # Zoxide
 zoxide init --hook prompt nushell | save -f ~/.zoxide.nu

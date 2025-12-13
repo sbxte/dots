@@ -219,11 +219,11 @@ $env.config = {
         case_sensitive: false # set to true to enable case-sensitive completions
         quick: true    # set this to false to prevent auto-selecting completions when only one remains
         partial: true    # set this to false to prevent partial filling of the prompt
-        algorithm: "prefix"    # prefix or fuzzy
+        algorithm: "fuzzy"    # prefix or fuzzy
         sort: "smart" # "smart" (alphabetical for prefix matching, fuzzy score for fuzzy matching) or "alphabetical"
         external: {
             enable: true # set to false to prevent nushell looking into $env.PATH to find more suggestions, `false` recommended for WSL users as this look up may be very slow
-            max_results: 100 # setting it lower can improve completion performance at the cost of omitting some options
+            max_results: 50 # setting it lower can improve completion performance at the cost of omitting some options
             completer: null # check 'carapace_completer' above as an example
         }
         use_ls_colors: true # set this to true to enable file/path/directory completions using LS_COLORS
@@ -931,7 +931,47 @@ source ~/.zoxide.nu
 # Completions
 #
 
-source ~/.cache/carapace/init.nu
+let carapace_completer = {|spans: list<string>|
+    carapace $spans.0 nushell ...$spans
+    | from json
+    | if ($in | default [] | any {|| $in.display | str starts-with "ERR"}) { null } else { $in }
+}
+
+# This completer will use carapace by default
+let external_completer = {|spans|
+    let expanded_alias = scope aliases
+    | where name == $spans.0
+    | get -o 0.expansion
+
+    let spans = if $expanded_alias != null {
+        $spans
+        | skip 1
+        | prepend ($expanded_alias | split row ' ' | take 1)
+    } else {
+        $spans
+    }
+
+    match $spans.0 {
+        # # carapace completions are incorrect for nu
+        # nu => $fish_completer
+        # # fish completes commits and branch names in a nicer way
+        # git => $fish_completer
+        # # carapace doesn't have completions for asdf
+        # asdf => $fish_completer
+        _ => $carapace_completer
+    } | do $in $spans
+}
+
+$env.config = {
+    # ...
+    completions: {
+        external: {
+            enable: true
+            completer: $external_completer
+        }
+    }
+    # ...
+}
 
 #
 # Aliases

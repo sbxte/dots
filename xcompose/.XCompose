@@ -56,3 +56,38 @@ include "%L"
 <Multi_key> <g> <q> <p> : "ψ"    U03C8    # GREEK SMALL LETTER PSI
 <Multi_key> <g> <q> <s> : "ς"    U03C2    # GREEK SMALL LETTER FINAL SIGMA
 <Multi_key> <g> <q> <x> : "ξ"    U03BE    # GREEK SMALL LETTER XI
+
+# Numeric superscripts and subscripts
+<Multi_key> <^> <0> : "⁰"    U2079    # SUPERSCRIPT ZERO
+<Multi_key> <^> <1> : "¹"    U00B9    # SUPERSCRIPT ONE
+<Multi_key> <^> <2> : "²"    U00B2    # SUPERSCRIPT TWO
+<Multi_key> <^> <3> : "³"    U00B3    # SUPERSCRIPT THREE
+<Multi_key> <^> <4> : "⁴"    U2074    # SUPERSCRIPT FOUR
+<Multi_key> <^> <5> : "⁵"    U2075    # SUPERSCRIPT FIVE
+<Multi_key> <^> <6> : "⁶"    U2076    # SUPERSCRIPT SIX
+<Multi_key> <^> <7> : "⁷"    U2077    # SUPERSCRIPT SEVEN
+<Multi_key> <^> <8> : "⁸"    U2078    # SUPERSCRIPT EIGHT
+<Multi_key> <^> <9> : "⁹"    U2079    # SUPERSCRIPT NINE
+<Multi_key> <^> <+> : "⁺"    U207A    # SUPERSCRIPT PLUS
+<Multi_key> <^> <-> : "⁻"    U207B    # SUPERSCRIPT MINUS
+<Multi_key> <^> <=> : "⁼"    U207C    # SUPERSCRIPT EQUAL
+<Multi_key> <^> <(> : "⁽"    U207D    # SUPERSCRIPT PAREN OPEN
+<Multi_key> <^> <)> : "⁾"    U207E    # SUPERSCRIPT PAREN CLOSE
+<Multi_key> <^> <n> : "ⁿ"    U207F    # SUPERSCRIPT LETTER N
+<Multi_key> <^> <i> : "ⁱ"    U207F    # SUPERSCRIPT LETTER I
+
+<Multi_key> <_> <0> : "₀"    U2080    # SUPERSCRIPT ZERO
+<Multi_key> <_> <1> : "₁"    U2081    # SUPERSCRIPT ONE
+<Multi_key> <_> <1> : "₂"    U2082    # SUPERSCRIPT TWO
+<Multi_key> <_> <3> : "₃"    U2083    # SUPERSCRIPT THREE
+<Multi_key> <_> <4> : "₄"    U2084    # SUPERSCRIPT FOUR
+<Multi_key> <_> <5> : "₅"    U2085    # SUPERSCRIPT FIVE
+<Multi_key> <_> <6> : "₆"    U2086    # SUPERSCRIPT SIX
+<Multi_key> <_> <7> : "₇"    U2087    # SUPERSCRIPT SEVEN
+<Multi_key> <_> <8> : "₈"    U2088    # SUPERSCRIPT EIGHT
+<Multi_key> <_> <9> : "₉"    U2089    # SUPERSCRIPT NINE
+<Multi_key> <_> <A> : "₊"    U208A    # SUPERSCRIPT PLUS
+<Multi_key> <_> <B> : "₋"    U208B    # SUPERSCRIPT MINUS
+<Multi_key> <_> <C> : "₌"    U208C    # SUPERSCRIPT EQUAL
+<Multi_key> <_> <D> : "₍"    U208D    # SUPERSCRIPT PAREN OPEN
+<Multi_key> <_> <E> : "₎"    U208E    # SUPERSCRIPT PAREN CLOSE

@@ -55,10 +55,15 @@
 	padding: 0 8px;
 }
 
-tooltip {
+tooltip, 
+#tray menu {
 	border-radius: 5px;
 	background: alpha(black,.6);
 	box-shadow:none;
+}
+
+#tray menu *:hover {
+	background: alpha(#0062ff, .8);
 }
 
 #network {

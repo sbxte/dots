@@ -982,6 +982,8 @@ alias g = git
 
 alias t = tuecli
 
+alias gs = echo "do you not mean git status?"
+
 #
 # Misc
 #

@@ -1,7 +1,6 @@
 [user]
 	email = stormybytes@gmail.com
 	name = SByte
-	password = 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
 	signingkey = BEA213B1E1322CB4
 [filter "lfs"]
 	smudge = git-lfs smudge -- %f
@@ -186,7 +185,8 @@
 	sshCommand = "ssh -i ~/.ssh/id_ed25519"
 
 [credential]
-	helper = oauth
+	# Authenticate via ssh instead
+	# helper = oauth
 
 [gpg]
 	program = /usr/bin/gpg

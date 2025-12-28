@@ -1,7 +1,6 @@
 [user]
 	email = stormybytes@gmail.com
 	name = SByte
-	password = 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
 	signingkey = BEA213B1E1322CB4
 [filter "lfs"]
 	smudge = git-lfs smudge -- %f
@@ -190,5 +189,3 @@
 
 [gpg]
 	program = "C:\\Program Files (x86)\\GnuPG\\bin\\gpg.exe"
-[gpg "ssh"]
-	allowedSignersFile = C:/Users/Daniel/allowed_signers

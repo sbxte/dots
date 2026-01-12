@@ -94,6 +94,9 @@ config() {
 	# Neovim
 	link nvim ~/.config nvim
 
+	# Kitty 
+	link kitty ~/.config/ kitty
+
 	# Alacritty
 	link alacritty ~/.config/ alacritty
 

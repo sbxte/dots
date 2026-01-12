@@ -149,6 +149,8 @@ alias ls="eza --icons -l"
 alias e="nvim"
 alias g="git"
 
+alias gs="echo 'do you mean git status?'"
+
 alias compact_memory="sudo bash -c 'echo 1 > /proc/sys/vm/compact_memory'"
 alias drop_caches="sudo bash -c 'echo 1 > /proc/sys/vm/drop_caches'"
 alias clnmem="compact_memory; drop_caches;"

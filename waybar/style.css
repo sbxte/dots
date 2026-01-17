@@ -101,6 +101,7 @@ tooltip,
 #battery,
 #disk,
 #tray,
+#mpris,
 #custom-notification {
 	padding: 0 8 0 8px;
 }

@@ -34,7 +34,7 @@ local venv_prompt='$(virtualenv_prompt_info)'
 local shell_segment="%B%F{white}Zsh%f%b"
 
 PROMPT="╭─${venv_prompt}${user_host} ${current_dir} ${shell_segment} ${git_branch} 
-╰─$PR_PROMPT "
+╰─$PR_PROMPT"
 RPROMPT="${return_code}"
 
 ZSH_THEME_GIT_PROMPT_PREFIX="%F{yellow}‹"

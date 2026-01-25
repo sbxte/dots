@@ -27,20 +27,20 @@
 [alias]
 	alias = config --get-regexp alias
 
-	lgss = "log --graph --decorate --oneline --date-order --format=format:'%C(bold blue)%h %<(50,trunc)%C(reset)%s %<(12,trunc)%C(white)%cn %<(12,trunc)%C(white)%an %C(bold green)(%ch) %C(reset)%C(auto)%D'"
+	lgss = "log --graph --date-order --format=format:'%C(bold blue)%h %<(50,trunc)%C(reset)%s %<(12,trunc)%C(white)%cn %<(12,trunc)%C(white)%an %C(bold green)(%ch) %C(reset)%C(auto)%D'"
 	lgsa = lgss --all
 	lgsf = !git --no-pager lgsa
 	lga = lgsa
 	lgs = !git --no-pager lgsa -12
 
-	lgfs = "log --graph --decorate --oneline --date-order --format=format:'%C(bold blue)%H %C(reset)%C(auto)%D %n%C(reset)%C(white)%<(24,trunc)%cn %C(bold red)%C(white)%<(26,trunc)%ce %C(bold green)(%ch) %n%C(white)%<(24,trunc)%an %C(bold red)%C(white)%<(26,trunc)%ae %C(bold green)(%ah) %n%C(reset)%B %n%C(reset)%C(white)%N'"
+	lgfs = "log --graph --date-order --format=format:'%C(bold blue)%H %C(reset)%C(auto)%D %n%C(reset)%C(white)%<(24,trunc)%cn %C(bold red)%C(white)%<(26,trunc)%ce %C(bold green)(%ch) %n%C(white)%<(24,trunc)%an %C(bold red)%C(white)%<(26,trunc)%ae %C(bold green)(%ah) %n%C(reset)%B %n%C(reset)%C(white)%N'"
 	lgfa = lgfs --all
 	lgff = "!git --no-pager lgfa"
 	lgf = !git --no-pager lgfa -6
 
 	lg = lgs
 
-	lgsak = "log --graph --decorate --oneline --author-date-order --format=format:'%C(bold blue)%h %<(70,trunc)%C(reset)%s %<(12,trunc)%C(white)%cn %C(cyan)%G? %C(bold green)(%ch) %C(reset)%C(auto)%D'"
+	lgsak = "log --graph --author-date-order --format=format:'%C(bold blue)%h %<(70,trunc)%C(reset)%s %<(12,trunc)%C(white)%cn %C(cyan)%G? %C(bold green)(%ch) %C(reset)%C(auto)%D'"
 	lgk = !git --no-pager lgsak -12
 
 

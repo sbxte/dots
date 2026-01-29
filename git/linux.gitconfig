@@ -132,6 +132,12 @@
 	icom = "!git add -i && git commit"
 	ecom = commit --allow-empty
 	amcom = commit --amend --no-edit
+
+	bi = bisect
+	big = bisect good
+	bib = bisect bad
+	bis = bisect start
+	bir = bisect reset
 [color]
 	diff = true
 	status = always

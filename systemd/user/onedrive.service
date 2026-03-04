@@ -5,7 +5,7 @@ After=network-online.target nss-lookup.target
 
 [Service]
 Type=idle
-WorkingDirectory=/home/sbyte/
+WorkingDirectory=/home/sbyte/CloudStorage/
 ExecStart=/usr/bin/rclone mount Onedrive: Onedrive --vfs-cache-mode full
 ExecStop=/usr/bin/fusermount3 -u Onedrive -z
 

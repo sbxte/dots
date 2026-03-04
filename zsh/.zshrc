@@ -138,6 +138,9 @@ export GPG_TTY=$(tty)
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 # Carapace (completion)
+autoload -U compinit && compinit
+export CARAPACE_BRIDGES='zsh,fish,bash,inshellisense' # optional
+zstyle ':completion:*' format $'\e[2;37mCompleting %d\e[m'
 source <(carapace _carapace)
 
 #

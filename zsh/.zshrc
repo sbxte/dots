@@ -158,6 +158,8 @@ alias compact_memory="sudo bash -c 'echo 1 > /proc/sys/vm/compact_memory'"
 alias drop_caches="sudo bash -c 'echo 1 > /proc/sys/vm/drop_caches'"
 alias clnmem="compact_memory; drop_caches;"
 
+alias kicat="kitty +icat"
+
 bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
 

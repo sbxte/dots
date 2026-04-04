@@ -163,6 +163,10 @@ alias clnmem="compact_memory; drop_caches;"
 
 alias kicat="kitty +icat"
 
+copyfile() {
+	echo "file://$(realpath $1)" | wl-copy -t text/uri-list
+}
+
 bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
 

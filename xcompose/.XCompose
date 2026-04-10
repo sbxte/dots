@@ -95,3 +95,21 @@ include "%L"
 <Multi_key> <underscore> <C> : "₌"    U208C    # SUPERSCRIPT EQUAL
 <Multi_key> <underscore> <D> : "₍"    U208D    # SUPERSCRIPT PAREN OPEN
 <Multi_key> <underscore> <E> : "₎"    U208E    # SUPERSCRIPT PAREN CLOSE
+
+#
+# Math operators
+#
+
+# Set operators
+<Multi_key> <m> <s> <e> : "∈" U2208 # ELEMENT OF 
+<Multi_key> <m> <s> <E> : "∉" U2209 # NOT ELEMENT OF 
+<Multi_key> <m> <s> <b> : "⊂" U2282 # SUBSET OF
+<Multi_key> <m> <s> <B> : "⊄" U2284 # NOT SUBSET OF
+<Multi_key> <m> <s> <a> : "⊃" U2283 # SUPERSET OF
+<Multi_key> <m> <s> <A> : "⊅" U2285 # NOT SUPERSET OF
+
+# Quantifier operator
+<Multi_key> <m> <q> <a> : "∀" U2200 # FOR ALL
+<Multi_key> <m> <q> <e> : "∃" U2203 # THERE EXISTS
+<Multi_key> <m> <q> <E> : "∄" U2204 # THERE DOES NOT EXIST
+

@@ -1,7 +1,7 @@
 [user]
 	email = stormybytes@gmail.com
 	name = SByte
-	signingkey = BEA213B1E1322CB4
+	signingkey = F045BB4A381EB172
 [filter "lfs"]
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process

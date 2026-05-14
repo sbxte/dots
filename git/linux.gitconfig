@@ -191,6 +191,7 @@
 	sshCommand = "ssh -i ~/.ssh/id_ed25519"
 
 [credential]
+	helper = /usr/lib/git-core/git-credential-libsecret
 	# Authenticate via ssh instead
 	# helper = oauth
 

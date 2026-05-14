@@ -100,8 +100,9 @@ config() {
 	# Alacritty
 	link alacritty ~/.config/ alacritty
 
-	# Hyprland
+	# Desktop Environment
 	link hypr ~/.config hypr
+	link niri ~/.config niri
 	link swaync ~/.config swaync
 	link waybar ~/.config waybar
 
@@ -139,7 +140,7 @@ install() {
 	case $ID in
 	arch)
 		sudo pacman -S --noconfirm --needed base-devel git zsh neovim alacritty \
-			gdm hyprland swaync waybar nautilus wofi hyprpaper hyprlock pipewire wireplumber \
+			gdm hyprland swaync waybar nautilus wofi hyprpaper hyprlock pipewire wireplumber xwayland-satellite \
 			nerd-fonts acpilight ibus exa eza tlp playerctl bluez bluez-utils bc
 		if ! command -v yay &>/dev/null; then
 			pacman -S --needed git base-devel

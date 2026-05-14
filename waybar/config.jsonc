@@ -6,6 +6,7 @@
 
 	"modules-left": [
 		"hyprland/workspaces",
+		"niri/workspaces",
 	],
 	"modules-center": [
 		"custom/notification",
@@ -31,7 +32,20 @@
 			"urgent": "",
 			"active": "",
 			"default": ""
-		}
+		},
+		"exec-if": "[[ $(echo $XDG_CURRENT_DESKTOP) == 'hyprland' ]]"
+	},
+
+	"niri/workspaces": {
+		"on-scroll-up": "niri msg action focus-workspace-up",
+		"on-scroll-down": "niri msg action focus-workspace-down",
+		"format": "{index} {icon}",
+		"format-icons": {
+			"urgent": "",
+			"active": "",
+			"default": ""
+		},
+		"exec-if": "[[ $(echo $XDG_CURRENT_DESKTOP) == 'niri' ]]"
 	},
 
 	"clock#1": {

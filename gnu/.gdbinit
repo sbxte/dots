@@ -9,3 +9,4 @@ set follow-fork-mode parent
 set detach-on-fork on
 set logging enabled off
 set print inferior-events off
+set history save off

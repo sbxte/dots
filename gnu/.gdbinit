@@ -10,3 +10,6 @@ set detach-on-fork on
 set logging enabled off
 set print inferior-events off
 set history save off
+
+# Pwndbg options
+set context-sections code

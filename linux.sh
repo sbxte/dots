@@ -60,6 +60,7 @@ config() {
 
 	# Root systemd
 	link systemd/system/user-sleep@.service /etc/systemd/system user-sleep@.service
+	link systemd/system/fix-elan-touchpad.service /etc/systemd/system fix-elan-touchpad.service
 
 	# Greetd
 	copy greetd /etc
@@ -94,7 +95,7 @@ config() {
 	# Neovim
 	link nvim ~/.config nvim
 
-	# Kitty 
+	# Kitty
 	link kitty ~/.config/ kitty
 
 	# Alacritty
@@ -115,7 +116,7 @@ config() {
 	# Clangd
 	link clangd ~/.config clangd
 
-	# GNU 
+	# GNU
 	link gnu/.gdbinit ~ .gdbinit
 
 	echo "Finished creating .config and ~ symlinks!"

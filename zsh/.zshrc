@@ -146,6 +146,9 @@ source <(carapace _carapace)
 # Man page use nvim 
 export MANPAGER='nvim +Man!'
 
+# Fzf (Fuzzy Finder)
+source <(fzf --zsh)
+
 #
 # Aliases and Binds
 #

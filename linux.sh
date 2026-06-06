@@ -106,6 +106,7 @@ config() {
 	link niri ~/.config niri
 	link swaync ~/.config swaync
 	link waybar ~/.config waybar
+	link sunsetr ~/.config sunsetr
 
 	# Cava
 	link cava ~/.config cava

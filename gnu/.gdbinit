@@ -12,4 +12,4 @@ set print inferior-events off
 set history save off
 
 # Pwndbg options
-set context-sections code
+set context-sections code disasm

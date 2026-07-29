@@ -1,6 +1,6 @@
 #[Backend]
-backend = "auto"        # Backend to use: "auto", "hyprland", "hyprsunset" or "wayland"
-transition_mode = "geo" # Select: "geo", "finish_by", "start_at", "center", "static"
+backend = "auto"             # Backend to use: "auto", "hyprland", "hyprsunset" or "wayland"
+transition_mode = "start_at" # Select: "geo", "finish_by", "start_at", "center", "static"
 
 #[Smoothing]
 smoothing = true        # Enable smooth transitions during startup and exit
@@ -20,8 +20,8 @@ static_temp = 6500 # Color temperature for static mode (1000-20000) Kelvin
 static_gamma = 100 # Gamma percentage for static mode (10-200%)
 
 #[Manual transitions]
-sunset = "20:00:00"       # Time for manual sunset calculations (HH:MM:SS)
-sunrise = "06:00:00"      # Time for manual sunrise calculations (HH:MM:SS)
+sunset = "22:00:00"       # Time for manual sunset calculations (HH:MM:SS)
+sunrise = "05:00:00"      # Time for manual sunrise calculations (HH:MM:SS)
 transition_duration = 120 # Transition duration in minutes (5-120)
 
 #[Geolocation]

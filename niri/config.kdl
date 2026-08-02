@@ -284,7 +284,7 @@ layout {
 spawn-at-startup "waybar"
 spawn-at-startup "awww-daemon"
 spawn-at-startup "sunsetr"
-spawn-at-startup "awww img ~/wallpapers/mili_saikai.png"
+spawn-at-startup "awww" "img" "~/wallpapers/mili_saikai.png"
 spawn-at-startup "wl-paste" "--watch" "cliphist" "store"
 
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:

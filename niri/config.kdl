@@ -389,7 +389,9 @@ binds {
 	Mod+E repeat=false { spawn "nautilus"; }
 	Mod+B repeat=false { spawn "firefox"; }
 
+	// Notifications
 	Mod+N repeat=false { spawn "swaync-client" "-t"; }
+	Mod+Shift+N repeat=false { spawn "swaync-client" "-d"; } // Toggle Do Not Disturb (DND)
 
     // Use spawn-sh to run a shell command. Do this if you need pipes, multiple commands, etc.
     // Note: the entire command goes as a single argument. It's passed verbatim to `sh -c`.

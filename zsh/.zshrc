@@ -149,6 +149,9 @@ export MANPAGER='nvim +Man!'
 # Fzf (Fuzzy Finder)
 source <(fzf --zsh)
 
+# GHCup (Haskell)
+[ -f "/home/sbyte/.ghcup/env" ] && . "/home/sbyte/.ghcup/env" # ghcup-env
+
 #
 # Aliases and Binds
 #
@@ -249,3 +252,4 @@ fullscale=,cyan
 helpline=white,black
 roottext=lightgrey,black
 '
+

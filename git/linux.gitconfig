@@ -1,6 +1,6 @@
 [user]
 	email = sbxte0@gmail.com
-	name = SByte
+	name = sbxte
 	signingkey = F045BB4A381EB172
 [filter "lfs"]
 	smudge = git-lfs smudge -- %f

@@ -169,6 +169,9 @@ alias clnmem="compact_memory; drop_caches;"
 
 alias kicat="kitty +icat"
 
+alias wlc="wl-copy"
+alias wlp="wl-paste"
+
 copyfile() {
 	echo "file://$(realpath $1)" | wl-copy -t text/uri-list
 }

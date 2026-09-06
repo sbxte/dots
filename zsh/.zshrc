@@ -127,9 +127,10 @@ source $ZSH/oh-my-zsh.sh
 eval "$(zoxide init --hook prompt zsh)"
 
 # SSH Agent
-if ! [[ -v SSH_AUTH_SOCK ]]; then
-	eval `ssh-agent` > /dev/null
-fi
+# Point SSH to the GPG agent socket
+export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+# Ensure GPG agent is launched and aware of the current terminal
+gpgconf --launch gpg-agent
 
 # Gpg Agent
 export GPG_TTY=$(tty)

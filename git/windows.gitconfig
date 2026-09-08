@@ -55,6 +55,8 @@
 
 	f = fetch
 	fa = fetch --all
+	fp = fetch --prune
+	fpa = fetch --all --prune --prune-tags
 
 	a = add
 	aa = add -A

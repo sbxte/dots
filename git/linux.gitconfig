@@ -68,6 +68,7 @@
 	merges = merge --squash
 	m = merge
 	ms = merge --squash
+	mnc = merge --no-ff --no-commit
 
 	rb = rebase
 	rbi = rebase -i

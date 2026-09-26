@@ -318,7 +318,7 @@ animations {
     // off
 
     // Slow down all animations by this factor. Values below 1 speed them up instead.
-    slowdown 0.70
+    slowdown 0.50
 }
 
 // Window rules let you adjust behavior for individual windows.

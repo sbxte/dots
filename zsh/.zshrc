@@ -153,6 +153,9 @@ source <(fzf --zsh)
 # GHCup (Haskell)
 [ -f "/home/sbyte/.ghcup/env" ] && . "/home/sbyte/.ghcup/env" # ghcup-env
 
+# Unity CLI
+case ":${PATH}:" in *:"$HOME/.local/bin":*) ;; *) export PATH="$HOME/.local/bin:$PATH" ;; esac
+
 #
 # Aliases and Binds
 #

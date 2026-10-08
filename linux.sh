@@ -81,6 +81,7 @@ config() {
 
 	# ZSH
 	link zsh/.zshrc ~ .zshrc
+	link zsh/.zsh.env ~ .zsh.env
 	link omz ~ .omz-custom
 
 	# Nushell

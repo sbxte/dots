@@ -260,3 +260,5 @@ helpline=white,black
 roottext=lightgrey,black
 '
 
+# Environment variable credentials
+source ~/.zsh.env

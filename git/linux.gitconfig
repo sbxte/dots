@@ -10,7 +10,7 @@
 [core]
 	longpaths = true
 [init]
-	defaultBranch = master
+	defaultBranch = main
 [pull]
 	rebase = yes
 [diff]

@@ -1,12 +1,10 @@
 [Unit]
 Description=Fix ELAN06FA touchpad if i2c_designware.0 timed out during boot
-After=systemd-udev-settle.service
-Wants=systemd-udev-settle.service
+After=systemd-udev-trigger.service
 
 [Service]
 Type=oneshot
 ExecStart=/usr/local/bin/fix-elan-touchpad.sh
-RemainAfterExit=no
 
 [Install]
 WantedBy=multi-user.target

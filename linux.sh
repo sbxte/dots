@@ -60,7 +60,10 @@ config() {
 
 	# Root systemd
 	link systemd/system/user-sleep@.service /etc/systemd/system user-sleep@.service
+
 	link systemd/system/fix-elan-touchpad.service /etc/systemd/system fix-elan-touchpad.service
+	copy systemd/system/fix-elan-touchpad.sh /usr/local/bin
+
 	link systemd/system/kbd-powercycle.service /etc/systemd/system kbd-powercycle.service
 
 	# Greetd

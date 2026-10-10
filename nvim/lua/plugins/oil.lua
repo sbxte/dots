@@ -37,7 +37,7 @@ return {
 				["gr"] = { "actions.refresh" },
 				["-"] = { "actions.parent", mode = "n" },
 				["_"] = { "actions.open_cwd", mode = "n" },
-				["`"] = { "actions.cd", mode = "n" },
+				["`"] = { "actions.cd", mode = "n", noremap = true },
 				["~"] = { "actions.cd", opts = { scope = "tab" }, mode = "n" },
 				["gS"] = { "actions.change_sort", mode = "n" },
 				["gx"] = { "actions.open_external" },

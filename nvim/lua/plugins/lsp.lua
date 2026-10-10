@@ -281,10 +281,8 @@ return {
 
 	{
 		"mfussenegger/nvim-jdtls",
-		opts = function(_, opts)
-			-- Safeguard to ensure opts.jdtls exists
-			opts.jdtls = opts.jdtls or {}
-			opts.jdtls.settings = vim.tbl_deep_extend("force", opts.jdtls.settings or {}, {
+		opts = {
+			settings = {
 				java = {
 					inlayHints = {
 						parameterNames = {
@@ -292,8 +290,10 @@ return {
 						},
 					},
 				},
-			})
-			return opts
+			},
+		},
+		config = function(_, opts)
+			vim.lsp.config("jdtls", opts)
 		end,
 	},
 }

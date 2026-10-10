@@ -10,7 +10,7 @@ map({ "t" }, "<Esc><Esc>", "<C-\\><C-n>", { noremap = true, desc = "Exit termina
 -- Use q for closing windows instead
 map({ "n", "v" }, "q", function()
 	-- Catch "cannot close last window" error with pcall and ignore it
-	pcall(vim.api.nvim_win_close, vim.api.nvim_get_current_win(), true)
+	pcall(vim.api.nvim_win_close, vim.api.nvim_get_current_win(), false)
 end, { noremap = true, desc = "Close currently focused window" })
 
 map({ "n", "v" }, "<M-q>", "q", { noremap = true, desc = "Record vim macro" })

@@ -1,0 +1,11 @@
+[Unit]
+Description=Power-cycle USB controller 00:14.0 so the keyboard wakes up
+After=systemd-udev-trigger.service
+Before=display-manager.service
+
+[Service]
+Type=oneshot
+ExecStart=/bin/sh -c 'echo 0000:00:14.0 > /sys/bus/pci/drivers/xhci_hcd/unbind; sleep 2; echo 0000:00:14.0 > /sys/bus/pci/drivers/xhci_hcd/bind'
+
+[Install]
+WantedBy=multi-user.target

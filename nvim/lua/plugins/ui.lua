@@ -75,4 +75,38 @@ return {
 			{ "<c-b>", function() if not require("noice.lsp").scroll(-4) then return "<c-b>" end end, silent = true, expr = true, desc = "Scroll backward", mode = {"i", "n", "s"}},
 		},
 	},
+
+	-- Snacks.nvim
+	-- Includes Snacks.picker
+	{
+		"folke/snacks.nvim",
+		---@type snacks.Config
+		opts = {
+			picker = {
+				win = {
+					input = {
+						keys = {
+							["<Esc>"] = false,
+							["<c-n>"] = { "focus_list", mode = { "i", "n" } },
+							["<c-p>"] = { "focus_preview", mode = { "i", "n" } },
+						},
+					},
+					list = {
+						keys = {
+							["<Esc>"] = false,
+							["<c-n>"] = { "focus_list", mode = { "i", "n" } },
+							["<c-p>"] = { "focus_preview", mode = { "i", "n" } },
+						},
+					},
+					preview = {
+						keys = {
+							["<Esc>"] = false,
+							["<c-n>"] = { "focus_list", mode = { "i", "n" } },
+							["<c-p>"] = { "focus_preview", mode = { "i", "n" } },
+						},
+					},
+				},
+			},
+		},
+	},
 }

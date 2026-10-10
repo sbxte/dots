@@ -1,0 +1,50 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{dcs}
+
+% Always typeset math in display style
+\everymath{\displaystyle}
+
+% Standard mathematical typesetting packages
+\usepackage[T1]{fontenc}
+\usepackage{amsthm, amsmath, amssymb}
+\usepackage[fixamsmath]{mathtools}  % Extension to amsmath
+\usepackage[cal=cm, scr=rsfs, frak=euler, bb=ams]{mathalpha}
+\usepackage{lmodern}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage[hidelinks]{hyperref}
+
+% Symbol and utility packages
+\usepackage{cancel}
+\usepackage[nointegrals]{wasysym}
+
+% Extras
+\usepackage{physics}  % Lots of useful shortcuts and macros
+\usepackage{quiver}  % For drawing commutative diagrams easily
+\usepackage{hwemoji}  % Support Unicode emojis
+\usepackage{graphicx} % Gambar cok
+\DeclareUnicodeCharacter{FE0E}{}
+\DeclareUnicodeCharacter{FE0F}{}
+
+% Common shortcuts
+\def\mbb#1{\mathbb{#1}}
+\def\mfk#1{\mathfrak{#1}}
+\def\bN{\mbb{N}}
+\def\bC{\mbb{C}}
+\def\bR{\mbb{R}}
+\def\bQ{\mbb{Q}}
+\def\bZ{\mbb{Z}}
+
+% Sometimes helpful macros
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+
+% Some standard theorem definitions
+\newtheorem{Theorem}{Theorem}
+\newtheorem{Proposition}{Theorem}
+\newtheorem{Lemma}[Theorem]{Lemma}
+\newtheorem{Corollary}[Theorem]{Corollary}
+
+\theoremstyle{definition}
+\newtheorem{Definition}[Theorem]{Definition}
+
+\renewcommand{\div}{\divisionsymbol}

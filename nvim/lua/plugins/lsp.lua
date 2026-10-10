@@ -247,6 +247,7 @@ return {
 	},
 	{
 		"selimacerbas/mdkite.nvim",
+		ft = { "markdown", "md" },
 		-- a kitehost.nvim checkout under another dir name needs its spec to
 		-- say name = "kitehost.nvim", or lazy.nvim clones upstream beside it
 		dependencies = { "selimacerbas/kitehost.nvim" },

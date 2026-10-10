@@ -1,6 +1,3 @@
-[submodule "nvim"]
-	path = nvim
-	url = git@github.com:sbxte/nvim-configs
 [submodule "nushell/nu_scripts"]
 	path = nushell/nu_scripts
 	url = git@github.com:nushell/nu_scripts

@@ -4,10 +4,15 @@ Wants=network-online.target
 After=network-online.target nss-lookup.target
 
 [Service]
-Type=idle
+Type=notify
 WorkingDirectory=/home/sbyte/CloudStorage/
-ExecStart=/usr/bin/rclone mount Onedrive: Onedrive --vfs-cache-mode full
-ExecStop=/usr/bin/fusermount3 -u Onedrive -z
+ExecStart=/usr/bin/rclone mount Onedrive: Onedrive \
+    --vfs-cache-mode full \
+    --transfers 4 --tpslimit 5 \
+    --rc --rc-addr localhost:5572 --rc-no-auth \
+    --log-file /home/sbyte/.cache/rclone-onedrive-mount.log -v
+ExecStop=/usr/bin/fusermount3 -u Onedrive
+TimeoutStopSec=300
 
 [Install]
 WantedBy=default.target

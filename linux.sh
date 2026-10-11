@@ -126,6 +126,9 @@ config() {
 	# GNU
 	link gnu/.gdbinit ~ .gdbinit
 
+	# RClone
+	link rclone ~/.config rclone
+
 	echo "Finished creating .config and ~ symlinks!"
 
 	#

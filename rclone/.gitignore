@@ -1,0 +1,2 @@
+# Usually contains sensitive information so gitignore it
+rclone.conf

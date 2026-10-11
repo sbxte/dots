@@ -176,12 +176,20 @@ alias kicat="kitty +icat"
 alias wlc="wl-copy"
 alias wlp="wl-paste"
 
+bindkey "^[[1;5C" forward-word
+bindkey "^[[1;5D" backward-word
+
+#
+# Simple commands / scripts
+#
+
 copyfile() {
 	echo "file://$(realpath $1)" | wl-copy -t text/uri-list
 }
 
-bindkey "^[[1;5C" forward-word
-bindkey "^[[1;5D" backward-word
+rcuploads() {
+	~/.config/rclone/uploads.zsh
+}
 
 #
 # Fix keybinds

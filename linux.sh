@@ -51,6 +51,24 @@ copy() {
 	fi
 }
 
+copyifnotexist() {
+	FROM=$1
+	TO=$2
+
+	if [[ -f "$TO" ]]; then
+		echo "$TO already exists"
+		return
+	fi
+
+	if cp -rf "$FROM" "$TO" 2>/dev/null; then
+		echo "Copied $FROM -> $TO"
+	else
+		sudo -v
+		sudo cp -rf "$FROM" "$TO"
+		echo "(sudo) Copied $FROM -> $TO"
+	fi
+}
+
 config() {
 	#
 	# /etc
@@ -86,6 +104,7 @@ config() {
 	# ZSH
 	link zsh/.zshrc ~ .zshrc
 	link zsh/.zsh.env ~ .zsh.env
+	copyifnotexist zsh/.zsh.env.gitkeep zsh/.zsh.env
 	link omz ~ .omz-custom
 
 	# Nushell
@@ -128,6 +147,7 @@ config() {
 
 	# RClone
 	link rclone ~/.config rclone
+	copyifnotexist rclone/rclone.conf.gitkeep rclone/rclone.conf
 
 	echo "Finished creating .config and ~ symlinks!"
 

@@ -261,6 +261,7 @@ return {
 			debounce_ms = 300,
 			mermaid_elk = true,
 			custom_css = "~/.config/nvim/mdkite.css",
+			bottom_padding = 0.95, -- no extra space; last line sits at bototm edge
 		},
 		keys = {
 			{

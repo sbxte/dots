@@ -87,22 +87,22 @@ return {
 					input = {
 						keys = {
 							["<Esc>"] = false,
-							["<c-n>"] = { "focus_list", mode = { "i", "n" } },
-							["<c-p>"] = { "focus_preview", mode = { "i", "n" } },
+							["<c-j>"] = { "focus_list", mode = { "i", "n" } },
+							["<c-k>"] = { "focus_preview", mode = { "i", "n" } },
 						},
 					},
 					list = {
 						keys = {
 							["<Esc>"] = false,
-							["<c-n>"] = { "focus_list", mode = { "i", "n" } },
-							["<c-p>"] = { "focus_preview", mode = { "i", "n" } },
+							["<c-j>"] = { "focus_list", mode = { "i", "n" } },
+							["<c-k>"] = { "focus_preview", mode = { "i", "n" } },
 						},
 					},
 					preview = {
 						keys = {
 							["<Esc>"] = false,
-							["<c-n>"] = { "focus_list", mode = { "i", "n" } },
-							["<c-p>"] = { "focus_preview", mode = { "i", "n" } },
+							["<c-j>"] = { "focus_list", mode = { "i", "n" } },
+							["<c-k>"] = { "focus_preview", mode = { "i", "n" } },
 						},
 					},
 				},

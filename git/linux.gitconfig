@@ -70,6 +70,8 @@
 	ms = merge --squash
 	mnf = merge --no-ff
 	mnc = merge --no-ff --no-commit
+	mcn = merge --continue
+	mab = merge --abort
 
 	rb = rebase
 	rbi = rebase -i

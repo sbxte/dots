@@ -19,6 +19,7 @@
 	cmd = code --wait --diff $LOCAL $REMOTE
 [merge]
 	tool = vscode
+	ff = false
 [mergetool "vscode"]
 	cmd = code --wait $MERGED
 	trustExitCode = true
@@ -68,7 +69,6 @@
 	merges = merge --squash
 	m = merge
 	ms = merge --squash
-	mnf = merge --no-ff
 	mnc = merge --no-ff --no-commit
 	mcn = merge --continue
 	mab = merge --abort

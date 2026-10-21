@@ -1,0 +1,35 @@
+#!/bin/bash
+STATUS="$2"
+EXIT_NODE="100.67.93.111"
+
+# Add any SSID that should trigger the exit node here
+#HOTSPOT_SSIDS=(
+#    "Mint"
+#    "ITB Hotspot"
+#)
+HOTSPOT_SSIDS=(
+    "Mint"
+)
+
+logger -t hotspot-exitnode "dispatcher fired: iface=$1 status=$STATUS"
+
+CURRENT_SSID=$(nmcli -t -f active,ssid dev wifi | grep '^yes' | cut -d: -f2)
+logger -t hotspot-exitnode "current_ssid=[$CURRENT_SSID]"
+
+MATCHED=0
+for ssid in "${HOTSPOT_SSIDS[@]}"; do
+    if [ "$CURRENT_SSID" = "$ssid" ]; then
+        MATCHED=1
+        break
+    fi
+done
+
+if [ "$STATUS" = "up" ] && [ "$MATCHED" -eq 1 ]; then
+    logger -t hotspot-exitnode "matched [$CURRENT_SSID] - enabling exit node"
+    tailscale set --exit-node="$EXIT_NODE" --exit-node-allow-lan-access=true
+    logger -t hotspot-exitnode "tailscale set exit code: $?"
+elif [ "$MATCHED" -eq 0 ]; then
+    logger -t hotspot-exitnode "no match [$CURRENT_SSID] - disabling exit node"
+    tailscale set --exit-node=
+    logger -t hotspot-exitnode "tailscale set exit code: $?"
+fi

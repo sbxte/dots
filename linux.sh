@@ -89,6 +89,9 @@ config() {
 
 	echo "Finished copying configs to /etc!"
 
+	# NetworkManager
+	link networkmanager/dispatcher/91-hotspot-exitnode /etc/NetworkManager/dispatcher.d/ 91-hotspot-exitnode
+
 	#
 	# .config
 	#

@@ -1,0 +1,13 @@
+# Ignore everything here except actually important ones
+*
+
+!.gitignore
+
+!autoexec.cfg
+!demoman.cfg
+!engineer.cfg
+!heavyweapons.cfg
+!medic.cfg
+!pyro.cfg
+!spy.cfg
+!soldier.cfg

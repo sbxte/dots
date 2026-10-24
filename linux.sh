@@ -155,6 +155,16 @@ config() {
 	echo "Finished creating .config and ~ symlinks!"
 
 	#
+	# Games
+	#
+
+	# Team Fortress 2 (TF2)
+	TF2_LOCAL_STEAM_DIR="$HOME/.local/share/Steam/steamapps/common/Team Fortress 2/tf"
+	if [-d "$TF2_LOCAL_STEAM_DIR"]; then
+		link tf2 "$TF2_LOCAL_STEAM_DIR" cfg
+	fi
+
+	#
 	# MISC
 	#
 

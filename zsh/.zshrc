@@ -124,7 +124,7 @@ source $ZSH/oh-my-zsh.sh
 #
 
 # ZOXIDE (Better cd)
-eval "$(zoxide init --hook prompt zsh)"
+eval "$(zoxide init zsh)"
 
 # SSH Agent
 # Point SSH to the GPG agent socket

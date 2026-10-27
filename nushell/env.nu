@@ -122,4 +122,4 @@ mkdir $"($nu.cache-dir)"
 carapace _carapace nushell | save --force $"($nu.cache-dir)/carapace.nu"
 
 # Zoxide
-zoxide init --hook prompt nushell | save -f ~/.zoxide.nu
+zoxide init nushell | save -f ~/.zoxide.nu

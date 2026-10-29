@@ -385,7 +385,7 @@ binds {
     // Mod+Shift+Slash { show-hotkey-overlay; }
 
 	// Quick launch
-	Mod+Q repeat=false { spawn "kitty"; }
+	Mod+Return repeat=false { spawn "kitty"; }
 	Mod+Space repeat=false { spawn "fuzzel"; }
 	Mod+E repeat=false { spawn "nautilus"; }
 	Mod+B repeat=false { spawn "firefox"; }
@@ -429,7 +429,7 @@ binds {
     // or do a four-finger swipe up on a touchpad.
     Mod+O repeat=false { toggle-overview; }
 
-    Mod+C repeat=false { close-window; }
+    Mod+Q repeat=false { close-window; }
 
     Mod+H     { focus-column-left; }
 	Mod+L     { focus-column-right; }

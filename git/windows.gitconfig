@@ -133,6 +133,7 @@
 	c = commit
 	ac = "!git add -A && git commit"
 	cm = commit --amend --no-edit
+	ce = commit --allow-empty
 	com = commit
 	acom = "!git add -A && git commit"
 	icom = "!git add -i && git commit"

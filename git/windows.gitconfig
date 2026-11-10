@@ -41,7 +41,8 @@
 
 	lg = lgs
 
-	lgsan = "log --graph --date-order --format=format:'%C(bold blue)%h %<(12,trunc)%C(bold yellow)%cn %<(12,trunc)%C(bold yellow)%an %C(reset)%s %C(bold red)(%ch) %C(reset)%C(auto)%D'"
+	lgssn = "log --graph --date-order --format=format:'%C(bold blue)%h %<(12,trunc)%C(bold yellow)%cn %<(12,trunc)%C(bold yellow)%an %C(reset)%s %C(bold red)(%ch) %C(reset)%C(auto)%D'"
+	lgsan = lgssn --all
 	lgn = !git --no-pager lgsan -12
 
 	lgsak = "log --graph --author-date-order --format=format:'%C(bold blue)%h %<(12,trunc)%C(bold red)%cn %C(cyan)%G? %C(reset)%s %C(bold green)(%ch) %C(reset)%C(auto)%D'"

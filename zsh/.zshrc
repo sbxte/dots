@@ -156,6 +156,9 @@ source <(fzf --zsh)
 # Unity CLI
 case ":${PATH}:" in *:"$HOME/.local/bin":*) ;; *) export PATH="$HOME/.local/bin:$PATH" ;; esac
 
+# Bun installs
+export PATH="$HOME/.bun/bin:$PATH"
+
 #
 # Aliases and Binds
 #

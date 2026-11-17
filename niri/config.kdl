@@ -644,4 +644,7 @@ binds {
     // Powers off the monitors. To turn them back on, do any input like
     // moving the mouse or pressing any other key.
     Mod+Shift+P { power-off-monitors; }
+
+	// Lock the screen using hyprlock
+	Mod+Alt+L { spawn "systemctl" "start" "--user" "hyprlock"; }
 }

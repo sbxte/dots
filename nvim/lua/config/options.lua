@@ -41,6 +41,9 @@ vim.o.foldenable = true
 
 vim.o.autoread = true
 
+-- LazyVim's setting to determine how the LazyVim chooses the root dir
+vim.g.root_spec = { {".git"}, "lsp", "cwd" }
+
 -- LazyVim's auto format 
 -- Disabling this option means before every buffer write the formatter will be run
 vim.g.autoformat = true
